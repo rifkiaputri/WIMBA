@@ -12,13 +12,57 @@ and open the template in the editor.
     background-color: #990000;
     color: #FFF;
 }
+
 #navbar {
     padding: 0px 0px 0.25em 0px;
     border-bottom: none;
 }
+
 #navbar a {
     color: #FFF;
     font-size: 11px;
+    padding-bottom: 20px;
+}
+
+#navbar ul {
+    padding: 0;
+    margin: 0;
+}
+
+#navbar li {
+    display: inline;
+    position: relative;
+}
+
+#navbar li#article li {
+    display: block;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+#navbar li#article li:hover {
+    background: #333;
+}
+
+#navbar ul ul {
+    background: #990000;
+    position: absolute;
+    left: -15px;
+    top: 160%;
+    white-space: nowrap;
+    display: none;
+}
+
+#navbar ul ul ul {
+    background: #333;
+    left: 100%;
+    top: 0;
+}
+
+#navbar li:hover > ul {
+    display: block;
 }
 
 #main h2 {
