@@ -12,6 +12,22 @@
 	<ul class="menu">
 		<li id="home"><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
 		<li id="about"><a href="{url page="about"}">{translate key="navigation.about"}</a></li>
+				<li id="article"><a href="#">Article</a>
+					<ul>
+						<li><a href="#">Article Dummy 1</a>
+							<ul>
+								<li><a href="#">Volume 1.1</a></li>
+								<li><a href="#">Volume 1.2</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Article Dummy 2</a>
+							<ul>
+								<li><a href="#">Volume 2.1</a></li>
+								<li><a href="#">Volume 2.2</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
                 <li id="guide"><a href="http://localhost/ojs-2.4.5/index.php/test/pages/view/guide">Submission Guide</a></li>
                 <li id="template"><a href="http://localhost/ojs-2.4.5/index.php/test/pages/view/templates">Templates</a></li>
                 <li id="contact"><a href="http://localhost/ojs-2.4.5/index.php/test/pages/view/contact">Contact</a></li>
