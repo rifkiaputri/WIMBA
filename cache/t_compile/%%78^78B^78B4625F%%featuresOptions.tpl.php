@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:59:50
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:33:42
          compiled from controllers/grid/feature/featuresOptions.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'controllers/grid/feature/featuresOptions.tpl', 16, false),)), $this); ?>
@@ -25,4 +25,4 @@ if ($this->_foreach['featureOptions']['total'] > 0):
 			}
 		}<?php if (! ($this->_foreach['features']['iteration'] == $this->_foreach['features']['total'])): ?>,<?php endif; ?>
 	<?php endforeach; endif; unset($_from); ?>
-}
+}

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:02:35
+<?php /* Smarty version 2.6.26, created on 2015-03-15 01:58:41
          compiled from file:C:%5Cxampp2%5Chtdocs%5Cojs-2.4.5/plugins/blocks/fontSize/block.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/blocks/fontSize/block.tpl', 16, false),array('function', 'translate', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/blocks/fontSize/block.tpl', 22, false),)), $this); ?>
@@ -20,4 +20,4 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'f
 </span>
 	<div id="sizer"></div>
 </div>
-<br />
+<br />

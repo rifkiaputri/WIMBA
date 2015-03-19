@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:07:51
+<?php /* Smarty version 2.6.26, created on 2015-03-15 01:58:41
          compiled from file:C:%5Cxampp2%5Chtdocs%5Cojs-2.4.5/plugins/blocks/navigation/block.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/blocks/navigation/block.tpl', 13, false),array('function', 'url', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/blocks/navigation/block.tpl', 15, false),array('function', 'call_hook', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/blocks/navigation/block.tpl', 19, false),array('function', 'html_options_translate', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/blocks/navigation/block.tpl', 33, false),)), $this); ?>
@@ -70,4 +70,4 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'translate',
 	</ul>
 	<?php endif; ?>
 </div>
-<?php endif; ?>
+<?php endif; ?>

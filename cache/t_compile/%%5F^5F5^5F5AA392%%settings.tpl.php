@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:13:27
+<?php /* Smarty version 2.6.26, created on 2015-03-16 16:09:20
          compiled from admin/settings.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'admin/settings.tpl', 16, false),array('function', 'fieldLabel', 'admin/settings.tpl', 22, false),array('function', 'form_language_chooser', 'admin/settings.tpl', 25, false),array('function', 'translate', 'admin/settings.tpl', 26, false),array('function', 'html_options', 'admin/settings.tpl', 73, false),array('modifier', 'assign', 'admin/settings.tpl', 24, false),array('modifier', 'escape', 'admin/settings.tpl', 33, false),array('modifier', 'date_format', 'admin/settings.tpl', 46, false),)), $this); ?>
@@ -277,3 +277,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", '
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+

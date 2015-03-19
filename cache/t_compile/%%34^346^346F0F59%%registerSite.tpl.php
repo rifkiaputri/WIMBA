@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:39:01
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:11:08
          compiled from user/registerSite.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'iterate', 'user/registerSite.tpl', 15, false),array('function', 'translate', 'user/registerSite.tpl', 17, false),array('function', 'url', 'user/registerSite.tpl', 21, false),array('modifier', 'escape', 'user/registerSite.tpl', 21, false),)), $this); ?>
@@ -32,3 +32,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", '
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+

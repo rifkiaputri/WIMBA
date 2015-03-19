@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:02:35
+<?php /* Smarty version 2.6.26, created on 2015-03-15 01:58:41
          compiled from common/minifiedScripts.tpl */ ?>
 
 <script type="text/javascript" src="<?php echo $this->_tpl_vars['baseUrl']; ?>
@@ -51,4 +51,4 @@
 /plugins/generic/lucene/js/LuceneAutocompleteHandler.js"></script>
 
 <script type="text/javascript" src="<?php echo $this->_tpl_vars['baseUrl']; ?>
-/lib/pkp/js/lib/jquery/plugins/jquery.pkp.js"></script>
+/lib/pkp/js/lib/jquery/plugins/jquery.pkp.js"></script>

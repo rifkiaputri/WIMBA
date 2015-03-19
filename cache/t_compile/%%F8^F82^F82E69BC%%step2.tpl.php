@@ -1,15 +1,30 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 12:16:12
+<?php /* Smarty version 2.6.26, created on 2015-03-19 10:31:23
          compiled from author/submit/step2.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'author/submit/step2.tpl', 14, false),array('function', 'translate', 'author/submit/step2.tpl', 18, false),array('function', 'fieldLabel', 'author/submit/step2.tpl', 65, false),array('function', 'get_help_id', 'author/submit/step2.tpl', 72, false),array('modifier', 'escape', 'author/submit/step2.tpl', 15, false),array('modifier', 'to_array', 'author/submit/step2.tpl', 36, false),array('modifier', 'date_format', 'author/submit/step2.tpl', 48, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'author/submit/step2.tpl', 19, false),array('function', 'url', 'author/submit/step2.tpl', 26, false),array('function', 'fieldLabel', 'author/submit/step2.tpl', 77, false),array('function', 'get_help_id', 'author/submit/step2.tpl', 84, false),array('modifier', 'escape', 'author/submit/step2.tpl', 27, false),array('modifier', 'to_array', 'author/submit/step2.tpl', 48, false),array('modifier', 'date_format', 'author/submit/step2.tpl', 60, false),)), $this); ?>
 <?php $this->assign('pageTitle', "author.submit.step2"); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "author/submit/submitHeader.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+<script type="text/javascript">
+<?php echo '
+<!--
+function confirmForgottenUpload() {
+	var fieldValue = document.getElementById(\'submitForm\').uploadSuppFile.value;
+	if (fieldValue) {
+		return confirm("'; ?>
+<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "author.submit.forgottenSubmitSuppFile"), $this);?>
+<?php echo '");
+	}
+	return true;
+}
+// -->
+'; ?>
 
-<form method="post" action="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'saveSubmit','path' => $this->_tpl_vars['submitStep']), $this);?>
+</script>
+<form id="submitForm" method="post" action="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'saveSubmit','path' => $this->_tpl_vars['submitStep']), $this);?>
 " enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="<?php echo ((is_array($_tmp=$this->_tpl_vars['articleId'])) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
 " />
@@ -106,6 +121,7 @@ unset($_smarty_tpl_vars);
 ', '<?php echo ((is_array($_tmp=$this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "author.submit.cancelSubmission"), $this))) ? $this->_run_mod_handler('escape', true, $_tmp, 'jsparam') : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp, 'jsparam'));?>
 ')" /></p>
 
+
 </form>
 
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -113,3 +129,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", '
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+

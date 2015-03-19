@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 12:18:16
+<?php /* Smarty version 2.6.26, created on 2015-03-19 05:39:47
          compiled from author/submit/step3.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'author/submit/step3.tpl', 14, false),array('function', 'fieldLabel', 'author/submit/step3.tpl', 41, false),array('function', 'form_language_chooser', 'author/submit/step3.tpl', 58, false),array('function', 'translate', 'author/submit/step3.tpl', 59, false),array('function', 'html_options', 'author/submit/step3.tpl', 117, false),array('function', 'call_hook', 'author/submit/step3.tpl', 132, false),array('modifier', 'assign', 'author/submit/step3.tpl', 14, false),array('modifier', 'escape', 'author/submit/step3.tpl', 19, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'author/submit/step3.tpl', 14, false),array('function', 'fieldLabel', 'author/submit/step3.tpl', 41, false),array('function', 'form_language_chooser', 'author/submit/step3.tpl', 58, false),array('function', 'translate', 'author/submit/step3.tpl', 59, false),array('function', 'html_options', 'author/submit/step3.tpl', 119, false),array('function', 'call_hook', 'author/submit/step3.tpl', 134, false),array('modifier', 'assign', 'author/submit/step3.tpl', 14, false),array('modifier', 'escape', 'author/submit/step3.tpl', 19, false),)), $this); ?>
 <?php $this->assign('pageTitle', "author.submit.step3"); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "author/submit/submitHeader.tpl", 'smarty_include_vars' => array()));
@@ -146,15 +146,6 @@ if ($this->_foreach['authors']['total'] > 0):
 ][email]" id="authors-<?php echo ((is_array($_tmp=$this->_tpl_vars['authorIndex'])) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
 -email" value="<?php echo ((is_array($_tmp=$this->_tpl_vars['author']['email'])) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
 " size="30" maxlength="90" /></td>
-</tr>
-<tr valign="top">
-	<td width="20%" class="label"><?php echo $this->_plugins['function']['fieldLabel'][0][0]->smartyFieldLabel(array('name' => "authors-".($this->_tpl_vars['authorIndex'])."-orcid",'key' => "user.orcid"), $this);?>
-</td>
-	<td width="80%" class="value"><input type="text" class="textField" name="authors[<?php echo ((is_array($_tmp=$this->_tpl_vars['authorIndex'])) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
-][orcid]" id="authors-<?php echo ((is_array($_tmp=$this->_tpl_vars['authorIndex'])) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
--orcid" value="<?php echo ((is_array($_tmp=$this->_tpl_vars['author']['orcid'])) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
-" size="30" maxlength="90" /><br /><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "user.orcid.description"), $this);?>
-</td>
 </tr>
 <tr valign="top">
 	<td class="label"><?php echo $this->_plugins['function']['fieldLabel'][0][0]->smartyFieldLabel(array('name' => "authors-".($this->_tpl_vars['authorIndex'])."-url",'key' => "user.url"), $this);?>
@@ -561,3 +552,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", '
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+

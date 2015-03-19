@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:59:50
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:33:42
          compiled from controllers/grid/gridHeader.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'translate', 'controllers/grid/gridHeader.tpl', 14, false),array('function', 'translate', 'controllers/grid/gridHeader.tpl', 22, false),)), $this); ?>
@@ -23,4 +23,4 @@ unset($_smarty_tpl_vars);
 		<p class="pkp_grid_description"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => $this->_tpl_vars['grid']->getInstructions()), $this);?>
 </p>
 	<?php endif; ?>
-</div>
+</div>

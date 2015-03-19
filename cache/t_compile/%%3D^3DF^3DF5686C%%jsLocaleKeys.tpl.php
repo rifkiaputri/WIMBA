@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:02:35
+<?php /* Smarty version 2.6.26, created on 2015-03-15 01:58:41
          compiled from common/jsLocaleKeys.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'common/jsLocaleKeys.tpl', 16, false),array('modifier', 'assign', 'common/jsLocaleKeys.tpl', 16, false),array('modifier', 'replace', 'common/jsLocaleKeys.tpl', 18, false),array('modifier', 'escape', 'common/jsLocaleKeys.tpl', 18, false),)), $this); ?>
@@ -16,4 +16,4 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'translate',
 <?php else: ?>'<?php echo ((is_array($_tmp=$this->_tpl_vars['keyValue'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'javascript') : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp, 'javascript')); ?>
 '<?php endif; ?>;
 	<?php endforeach; endif; unset($_from); ?>
-</script>
+</script>

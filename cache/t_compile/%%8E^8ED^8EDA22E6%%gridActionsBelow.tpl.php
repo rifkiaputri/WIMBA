@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:59:50
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:33:42
          compiled from controllers/grid/gridActionsBelow.tpl */ ?>
 
 <div class="actions pkp_linkActions grid_link_actions_below">
@@ -25,4 +25,4 @@ unset($_smarty_tpl_vars);
 		<?php endif; ?>
 	<?php endforeach; endif; unset($_from); ?>
 	<div class="pkp_helpers_clear"></div>
-</div>
+</div>

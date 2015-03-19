@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:02:35
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:11:23
          compiled from form/fieldLabel.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'form/fieldLabel.tpl', 11, false),)), $this); ?>
@@ -9,3 +9,4 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'f
 	<?php echo $this->_tpl_vars['FBV_label']; ?>
  <?php if ($this->_tpl_vars['FBV_required']): ?>*<?php endif; ?>
 </label>
+

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:53:13
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:22:47
          compiled from manager/setup/step2.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'manager/setup/step2.tpl', 14, false),array('function', 'fieldLabel', 'manager/setup/step2.tpl', 21, false),array('function', 'form_language_chooser', 'manager/setup/step2.tpl', 24, false),array('function', 'translate', 'manager/setup/step2.tpl', 25, false),array('function', 'get_help_id', 'manager/setup/step2.tpl', 157, false),array('function', 'call_hook', 'manager/setup/step2.tpl', 217, false),array('modifier', 'assign', 'manager/setup/step2.tpl', 23, false),array('modifier', 'escape', 'manager/setup/step2.tpl', 35, false),)), $this); ?>
@@ -445,3 +445,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", '
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+

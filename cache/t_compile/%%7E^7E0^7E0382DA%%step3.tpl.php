@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:59:47
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:33:38
          compiled from manager/setup/step3.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'manager/setup/step3.tpl', 13, false),array('function', 'fieldLabel', 'manager/setup/step3.tpl', 20, false),array('function', 'form_language_chooser', 'manager/setup/step3.tpl', 23, false),array('function', 'translate', 'manager/setup/step3.tpl', 24, false),array('function', 'load_url_in_div', 'manager/setup/step3.tpl', 393, false),array('function', 'fbvElement', 'manager/setup/step3.tpl', 400, false),array('modifier', 'assign', 'manager/setup/step3.tpl', 22, false),array('modifier', 'escape', 'manager/setup/step3.tpl', 37, false),array('modifier', 'translate', 'manager/setup/step3.tpl', 132, false),)), $this); ?>
@@ -623,4 +623,4 @@ if ($this->_foreach['checklist']['total'] > 0):
 $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?>
+ ?>

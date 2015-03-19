@@ -70,6 +70,7 @@
 	{/if}
 
 	{$additionalHeadData}
+        <link rel="stylesheet" href="{$baseUrl}/styles/wimba.css" type="text/css"/>
 </head>
 <body>
 
@@ -93,6 +94,7 @@
 	{$applicationName}
 {/if}
 </h1>
+{include file="common/navbar.tpl"}
 </div>
 </div>
 
@@ -115,7 +117,6 @@
 
 <div id="main">
 
-{include file="common/navbar.tpl"}
 
 <div id="breadcrumb">
 	<a href="{url page="index"}" target="_parent">{translate key="navigation.home"}</a> &gt;

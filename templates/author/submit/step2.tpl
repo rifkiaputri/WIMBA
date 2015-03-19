@@ -10,8 +10,20 @@
  *}
 {assign var="pageTitle" value="author.submit.step2"}
 {include file="author/submit/submitHeader.tpl"}
-
-<form method="post" action="{url op="saveSubmit" path=$submitStep}" enctype="multipart/form-data">
+<script type="text/javascript">
+{literal}
+<!--
+function confirmForgottenUpload() {
+	var fieldValue = document.getElementById('submitForm').uploadSuppFile.value;
+	if (fieldValue) {
+		return confirm("{/literal}{translate key="author.submit.forgottenSubmitSuppFile"}{literal}");
+	}
+	return true;
+}
+// -->
+{/literal}
+</script>
+<form id="submitForm" method="post" action="{url op="saveSubmit" path=$submitStep}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
 {include file="common/formErrors.tpl"}
 
@@ -78,6 +90,7 @@
 <div class="separator"></div>
 
 <p><input type="submit"{if !$submissionFile} onclick="return confirm('{translate|escape:"jsparam" key="author.submit.noSubmissionConfirm"}')"{/if} value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="confirmAction('{url page="author"}', '{translate|escape:"jsparam" key="author.submit.cancelSubmission"}')" /></p>
+
 
 </form>
 

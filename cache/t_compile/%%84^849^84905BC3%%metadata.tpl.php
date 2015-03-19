@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 12:39:00
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:47:52
          compiled from submission/metadata/metadata.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'submission/metadata/metadata.tpl', 11, false),array('function', 'url', 'submission/metadata/metadata.tpl', 14, false),array('function', 'call_hook', 'submission/metadata/metadata.tpl', 15, false),array('function', 'icon', 'submission/metadata/metadata.tpl', 28, false),array('modifier', 'concat', 'submission/metadata/metadata.tpl', 26, false),array('modifier', 'to_array', 'submission/metadata/metadata.tpl', 27, false),array('modifier', 'strip_tags', 'submission/metadata/metadata.tpl', 27, false),array('modifier', 'assign', 'submission/metadata/metadata.tpl', 27, false),array('modifier', 'escape', 'submission/metadata/metadata.tpl', 28, false),array('modifier', 'nl2br', 'submission/metadata/metadata.tpl', 45, false),array('modifier', 'default', 'submission/metadata/metadata.tpl', 45, false),array('modifier', 'strip_unsafe_html', 'submission/metadata/metadata.tpl', 57, false),)), $this); ?>
@@ -244,3 +244,4 @@ if ($this->_foreach['authors']['total'] > 0):
 <?php endif; ?>
 
 </div><!-- metadata -->
+

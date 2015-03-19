@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 12:42:26
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:49:35
          compiled from author/submission/editorDecision.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'author/submission/editorDecision.tpl', 12, false),array('function', 'url', 'author/submission/editorDecision.tpl', 34, false),array('function', 'icon', 'author/submission/editorDecision.tpl', 35, false),array('modifier', 'date_format', 'author/submission/editorDecision.tpl', 23, false),array('modifier', 'assign', 'author/submission/editorDecision.tpl', 34, false),array('modifier', 'to_array', 'author/submission/editorDecision.tpl', 52, false),array('modifier', 'escape', 'author/submission/editorDecision.tpl', 52, false),)), $this); ?>
@@ -110,4 +110,4 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'translate',
 		</td>
 	</tr>
 </table>
-</div>
+</div>

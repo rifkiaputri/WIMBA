@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:59:47
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:33:39
          compiled from form/select.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'form/select.tpl', 14, false),array('function', 'html_options_translate', 'form/select.tpl', 16, false),array('function', 'html_options', 'form/select.tpl', 16, false),)), $this); ?>
@@ -22,4 +22,4 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'f
 	<span><?php echo $this->_tpl_vars['FBV_label_content']; ?>
 </span>
 <?php endif; ?>
-</div>
+</div>

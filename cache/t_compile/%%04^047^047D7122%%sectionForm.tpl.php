@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 12:12:30
+<?php /* Smarty version 2.6.26, created on 2015-03-18 16:11:44
          compiled from manager/sections/sectionForm.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'manager/sections/sectionForm.tpl', 17, false),array('function', 'translate', 'manager/sections/sectionForm.tpl', 50, false),array('function', 'fieldLabel', 'manager/sections/sectionForm.tpl', 65, false),array('function', 'form_language_chooser', 'manager/sections/sectionForm.tpl', 70, false),array('function', 'html_options', 'manager/sections/sectionForm.tpl', 92, false),array('function', 'call_hook', 'manager/sections/sectionForm.tpl', 96, false),array('modifier', 'escape', 'manager/sections/sectionForm.tpl', 50, false),array('modifier', 'assign', 'manager/sections/sectionForm.tpl', 67, false),array('modifier', 'to_array', 'manager/sections/sectionForm.tpl', 172, false),)), $this); ?>
@@ -337,3 +337,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", '
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+

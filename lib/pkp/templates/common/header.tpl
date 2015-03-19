@@ -153,17 +153,21 @@
 
 {if $leftSidebarCode || $rightSidebarCode}
 	<div id="sidebar">
-		{* {include file="common/siteAdministration.html"} *}
-		{* {include file="common/journalManagement.html"} *}
-		{* {if $leftSidebarCode} *}
+		{if $pageTitle eq "admin.siteAdmin"}
+                    {include file="common/siteAdministration.html"}
+                {elseif $pageTitle eq "manager.journalManagement"}
+                    {include file="common/journalManagement.html"}
+                {else}
+                    <div id="rightSidebar">
+			{$rightSidebarCode}
+                    </div>
+                {/if}
+                {* {if $leftSidebarCode} *}
 			{* <div id="leftSidebar"> *}
 				{* {$leftSidebarCode} *}
 			{* </div> *}
 		{* {/if} *}
 		{* {if $rightSidebarCode} *}
-			<div id="rightSidebar">
-				{$rightSidebarCode}
-			</div>
 		{* {/if} *}
 	</div>
 {/if}

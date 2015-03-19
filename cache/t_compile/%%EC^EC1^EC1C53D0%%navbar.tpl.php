@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-07 07:52:47
+<?php /* Smarty version 2.6.26, created on 2015-03-19 10:25:44
          compiled from common/navbar.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'common/navbar.tpl', 13, false),array('function', 'translate', 'common/navbar.tpl', 13, false),array('function', 'call_hook', 'common/navbar.tpl', 43, false),)), $this); ?>
@@ -37,4 +37,4 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'comm
 		<?php echo $this->_plugins['function']['call_hook'][0][0]->smartyCallHook(array('name' => "Templates::Common::Header::Navbar::CurrentJournal"), $this);?>
 
                 	</ul>
-</div>
+</div>

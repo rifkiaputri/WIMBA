@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-07 08:00:16
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:34:39
          compiled from file:C:%5Cxampp2%5Chtdocs%5Cojs-2.4.5/plugins/generic/staticPages/settingsForm.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/settingsForm.tpl', 14, false),array('function', 'plugin_url', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/settingsForm.tpl', 21, false),array('function', 'url', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/settingsForm.tpl', 38, false),array('modifier', 'replace', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/settingsForm.tpl', 16, false),array('modifier', 'escape', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/settingsForm.tpl', 36, false),array('modifier', 'strip_tags', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/settingsForm.tpl', 37, false),array('modifier', 'truncate', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/settingsForm.tpl', 37, false),array('modifier', 'to_array', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/settingsForm.tpl', 38, false),array('block', 'iterate', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/settingsForm.tpl', 34, false),)), $this); ?>
@@ -80,4 +80,4 @@ unset($_smarty_tpl_vars);
 $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?>
+ ?>

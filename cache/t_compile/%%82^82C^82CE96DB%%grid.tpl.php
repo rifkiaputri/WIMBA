@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:59:50
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:33:42
          compiled from controllers/grid/grid.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'concat', 'controllers/grid/grid.tpl', 11, false),array('modifier', 'uniqid', 'controllers/grid/grid.tpl', 12, false),array('modifier', 'escape', 'controllers/grid/grid.tpl', 18, false),array('modifier', 'count', 'controllers/grid/grid.tpl', 95, false),array('function', 'translate', 'controllers/grid/grid.tpl', 95, false),)), $this); ?>
@@ -145,4 +145,4 @@ unset($_smarty_tpl_vars);
 		<?php endif; ?>
 	<?php if (! $this->_tpl_vars['grid']->getIsSubcomponent()): ?></div><?php endif; ?>
 	<div class="pkp_helpers_clear"></div>
-</div>
+</div>

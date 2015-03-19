@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 12:09:39
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:31:30
          compiled from author/active.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sort_heading', 'author/active.tpl', 15, false),array('function', 'translate', 'author/active.tpl', 16, false),array('function', 'url', 'author/active.tpl', 34, false),array('function', 'page_info', 'author/active.tpl', 100, false),array('function', 'page_links', 'author/active.tpl', 101, false),array('block', 'iterate', 'author/active.tpl', 24, false),array('modifier', 'escape', 'author/active.tpl', 29, false),array('modifier', 'date_format', 'author/active.tpl', 30, false),array('modifier', 'truncate', 'author/active.tpl', 32, false),array('modifier', 'strip_tags', 'author/active.tpl', 34, false),)), $this); ?>
@@ -137,3 +137,4 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'sort_headin
 <?php endif; ?>
 </table>
 </div>
+

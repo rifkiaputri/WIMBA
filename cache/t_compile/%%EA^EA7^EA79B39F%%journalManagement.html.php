@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-14 20:27:22
+<?php /* Smarty version 2.6.26, created on 2015-03-15 19:55:21
          compiled from common/journalManagement.html */ ?>
 <div id="adminSidebar">
 	<div id="content">

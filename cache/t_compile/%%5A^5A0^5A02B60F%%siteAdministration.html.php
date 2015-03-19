@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-14 20:03:34
+<?php /* Smarty version 2.6.26, created on 2015-03-15 19:39:12
          compiled from common/siteAdministration.html */ ?>
 <div id="adminSidebar">
 	<div id="content">

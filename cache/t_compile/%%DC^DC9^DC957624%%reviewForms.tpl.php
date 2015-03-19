@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-14 20:10:17
+<?php /* Smarty version 2.6.26, created on 2015-03-16 04:27:15
          compiled from manager/reviewForms/reviewForms.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'manager/reviewForms/reviewForms.tpl', 22, false),array('function', 'url', 'manager/reviewForms/reviewForms.tpl', 50, false),array('function', 'page_info', 'manager/reviewForms/reviewForms.tpl', 79, false),array('function', 'page_links', 'manager/reviewForms/reviewForms.tpl', 80, false),array('block', 'iterate', 'manager/reviewForms/reviewForms.tpl', 38, false),array('modifier', 'escape', 'manager/reviewForms/reviewForms.tpl', 46, false),)), $this); ?>
@@ -106,3 +106,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", '
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 12:22:03
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:47:18
          compiled from author/submit/complete.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'author/submit/complete.tpl', 17, false),array('function', 'url', 'author/submit/complete.tpl', 20, false),array('modifier', 'assign', 'author/submit/complete.tpl', 20, false),)), $this); ?>
@@ -37,3 +37,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", '
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:59:50
+<?php /* Smarty version 2.6.26, created on 2015-03-16 03:33:42
          compiled from linkAction/legacyLinkAction.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'concat', 'linkAction/legacyLinkAction.tpl', 18, false),array('modifier', 'uniqid', 'linkAction/legacyLinkAction.tpl', 18, false),array('modifier', 'escape', 'linkAction/legacyLinkAction.tpl', 20, false),array('function', 'modal', 'linkAction/legacyLinkAction.tpl', 27, false),array('function', 'confirm', 'linkAction/legacyLinkAction.tpl', 36, false),)), $this); ?>
@@ -59,3 +59,4 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'concat', 'l
 		// -->
 	</script>
 <?php endif; ?>
+

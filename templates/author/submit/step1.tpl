@@ -152,7 +152,7 @@ function checkSubmissionChecklist() {
 <div class="separator"></div>
 
 {/if}{* $currentJournal->getLocalizedSetting('copyrightNotice') != '' *}
-
+{*
 <div id="privacyStatement">
 <h3>{translate key="author.submit.privacyStatement"}</h3>
 <br />
@@ -160,7 +160,8 @@ function checkSubmissionChecklist() {
 </div>
 
 <div class="separator"></div>
-
+*}
+{*
 <div id="commentsForEditor">
 <h3>{translate key="author.submit.commentsForEditor"}</h3>
 
@@ -171,8 +172,9 @@ function checkSubmissionChecklist() {
 </tr>
 </table>
 </div>{* commentsForEditor *}
-
+{*
 <div class="separator"></div>
+*}
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="{if $articleId}confirmAction('{url page="author"}', '{translate|escape:"jsparam" key="author.submit.cancelSubmission"}'){else}document.location.href='{url page="author" escape=false}'{/if}" /></p>
 

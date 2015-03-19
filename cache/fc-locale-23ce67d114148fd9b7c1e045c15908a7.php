@@ -66,6 +66,7 @@
   'author.submit.form.abstractRequired' => 'Please enter the abstract of your article.',
   'author.submit.form.wordCountAlert' => 'You have exceeded the maximum word limit for abstracts in this section\'s track.',
   'author.submit.submissionFile' => 'Submission File',
+  'author.submit.supplementaryFile' => 'Supplementary File',
   'author.submit.uploadSubmissionFile' => 'Upload submission file',
   'author.submit.replaceSubmissionFile' => 'Replace submission file',
   'author.submit.noSubmissionFile' => 'No submission file uploaded.',

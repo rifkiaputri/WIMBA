@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-14 20:42:24
+<?php /* Smarty version 2.6.26, created on 2015-03-15 19:55:08
          compiled from core:common/header.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'core:common/header.tpl', 11, false),array('function', 'call_hook', 'core:common/header.tpl', 55, false),array('function', 'url', 'core:common/header.tpl', 104, false),array('modifier', 'assign', 'core:common/header.tpl', 11, false),array('modifier', 'escape', 'core:common/header.tpl', 22, false),array('modifier', 'replace', 'core:common/header.tpl', 127, false),)), $this); ?>
@@ -219,11 +219,25 @@ unset($_smarty_tpl_vars);
 
 <?php if ($this->_tpl_vars['leftSidebarCode'] || $this->_tpl_vars['rightSidebarCode']): ?>
 	<div id="sidebar">
-																							<div id="rightSidebar">
-				<?php echo $this->_tpl_vars['rightSidebarCode']; ?>
+		<?php if ($this->_tpl_vars['pageTitle'] == "admin.siteAdmin"): ?>
+                    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "common/siteAdministration.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+                <?php elseif ($this->_tpl_vars['pageTitle'] == "manager.journalManagement"): ?>
+                    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "common/journalManagement.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+                <?php else: ?>
+                    <div id="rightSidebar">
+			<?php echo $this->_tpl_vars['rightSidebarCode']; ?>
 
-			</div>
-			</div>
+                    </div>
+                <?php endif; ?>
+                																	</div>
 <?php endif; ?>
 
 <div id="main">
@@ -245,3 +259,4 @@ unset($_smarty_tpl_vars);
 </h3>
 <?php endif; ?>
 <div id="content">
+

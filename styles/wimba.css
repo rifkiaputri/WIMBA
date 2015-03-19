@@ -543,3 +543,8 @@ Button container (mixing buttons and groups, e.g., nav bar)
 .button-container .button-group {
 vertical-align: top;
 }
+
+input .defaultButton{
+    color: #333;
+}
+
