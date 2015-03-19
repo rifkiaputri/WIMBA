@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 12:02:26
+<?php /* Smarty version 2.6.26, created on 2015-03-19 18:24:50
          compiled from manager/files/index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'manager/files/index.tpl', 17, false),array('function', 'url', 'manager/files/index.tpl', 20, false),array('function', 'icon', 'manager/files/index.tpl', 46, false),array('modifier', 'escape', 'manager/files/index.tpl', 17, false),array('modifier', 'explode', 'manager/files/index.tpl', 20, false),array('modifier', 'concat', 'manager/files/index.tpl', 40, false),array('modifier', 'default', 'manager/files/index.tpl', 48, false),array('modifier', 'date_format', 'manager/files/index.tpl', 49, false),)), $this); ?>
@@ -111,3 +111,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", '
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+

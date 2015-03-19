@@ -38,12 +38,12 @@
 	{if $publishingMode == $smarty.const.PUBLISHING_MODE_SUBSCRIPTION}
 		<li>&#187; <a href="{url op="subscriptionsSummary"}">{translate key="manager.subscriptions"}</a></li>
 	{/if}
-	{*<li>&#187; <a href="{url op="plugins"}">{translate key="manager.plugins"}</a></li>*}
+	<li>&#187; <a href="{url op="plugins"}">{translate key="manager.plugins"}</a></li>
 	{*<li>&#187; <a href="{url op="importexport"}">{translate key="manager.importExport"}</a></li>*}
 	{call_hook name="Templates::Manager::Index::ManagementPages"}
 </ul>
 </div>
-<div id="managerUsers">
+{*<div id="managerUsers">
 <h3>{translate key="manager.users"}</h3>
 
 <ul class="plain">
@@ -55,14 +55,14 @@
 	<li>&#187; <a href="{url op="mergeUsers"}">{translate key="manager.people.mergeUsers"}</a></li>
 	{call_hook name="Templates::Manager::Index::Users"}
 </ul>
-</div>
+</div>*}
 <div id="managerRoles">
 <h3>{translate key="manager.roles"}</h3>
 
 <ul class="plain">
 	<li>&#187; <a href="{url op="people" path="managers"}">{translate key="user.role.managers"}</a></li>
 	<li>&#187; <a href="{url op="people" path="editors"}">{translate key="user.role.editors"}</a></li>
-	<li>&#187; <a href="{url op="people" path="sectionEditors"}">{translate key="user.role.sectionEditors"}</a></li>
+	{*<li>&#187; <a href="{url op="people" path="sectionEditors"}">{translate key="user.role.sectionEditors"}</a></li>*}
 	{if $roleSettings.useLayoutEditors}
 		<li>&#187; <a href="{url op="people" path="layoutEditors"}">{translate key="user.role.layoutEditors"}</a></li>
 	{/if}
@@ -74,8 +74,8 @@
 	{/if}
 	<li>&#187; <a href="{url op="people" path="reviewers"}">{translate key="user.role.reviewers"}</a></li>
 	<li>&#187; <a href="{url op="people" path="authors"}">{translate key="user.role.authors"}</a></li>
-	<li>&#187; <a href="{url op="people" path="readers"}">{translate key="user.role.readers"}</a></li>
-	<li>&#187; <a href="{url op="people" path="subscriptionManagers"}">{translate key="user.role.subscriptionManagers"}</a></li>
+	{*<li>&#187; <a href="{url op="people" path="readers"}">{translate key="user.role.readers"}</a></li>*}
+	{*<li>&#187; <a href="{url op="people" path="subscriptionManagers"}">{translate key="user.role.subscriptionManagers"}</a></li>*}
 	{call_hook name="Templates::Manager::Index::Roles"}
 </ul>
 </div>

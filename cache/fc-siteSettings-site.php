@@ -1,23 +1,23 @@
 <?php return array (
-  'showThumbnail' => true,
-  'showTitle' => true,
-  'showDescription' => true,
-  'title' => 
+  'contactEmail' => 
   array (
-    'en_US' => 'WIMBA',
+    'en_US' => 'rifkiafinaputri@gmail.com',
   ),
   'contactName' => 
   array (
     'en_US' => 'Open Journal Systems',
   ),
-  'contactEmail' => 
-  array (
-    'en_US' => 'rifkiafinaputri@gmail.com',
-  ),
-  'siteTheme' => '',
+  'defaultMetricType' => '',
   'oneStepReset' => false,
+  'preventManagerPluginManagement' => false,
+  'showDescription' => true,
+  'showThumbnail' => true,
+  'showTitle' => true,
+  'siteTheme' => '',
+  'title' => 
+  array (
+    'en_US' => 'WIMBA',
+  ),
   'useAlphalist' => false,
   'usePaging' => false,
-  'defaultMetricType' => '',
-  'preventManagerPluginManagement' => false,
 ); ?>

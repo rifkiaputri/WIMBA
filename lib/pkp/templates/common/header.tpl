@@ -153,10 +153,10 @@
 
 {if $leftSidebarCode || $rightSidebarCode}
 	<div id="sidebar">
-		{if $pageTitle eq "admin.siteAdmin"}
-                    {include file="common/siteAdministration.html"}
-                {elseif $pageTitle eq "manager.journalManagement"}
-                    {include file="common/journalManagement.html"}
+		{if strpos($smarty.server.REQUEST_URI, "/admin") !== false }
+                    {include file="common/siteAdministration.tpl"}
+                {elseif strpos($smarty.server.REQUEST_URI, "/manager") !== false }
+                    {include file="common/journalManagement.tpl"}
                 {else}
                     <div id="rightSidebar">
 			{$rightSidebarCode}

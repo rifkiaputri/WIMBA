@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-06 14:56:45
+<?php /* Smarty version 2.6.26, created on 2015-03-19 19:17:09
          compiled from file:C:%5Cxampp2%5Chtdocs%5Cojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 18, false),array('function', 'plugin_url', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 24, false),array('function', 'fieldLabel', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 35, false),array('function', 'form_language_chooser', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 39, false),array('modifier', 'replace', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 20, false),array('modifier', 'to_array', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 24, false),array('modifier', 'assign', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 37, false),array('modifier', 'escape', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 46, false),)), $this); ?>
@@ -97,4 +97,4 @@ unset($_smarty_tpl_vars);
 $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
- ?>
+ ?>

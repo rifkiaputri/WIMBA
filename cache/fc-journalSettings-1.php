@@ -293,7 +293,7 @@ Please follow the following protocol for making electronic revisions to your man
   ),
   'title' => 
   array (
-    'en_US' => 'TestJournal',
+    'en_US' => 'WIMBA',
   ),
   'waiverPolicy' => 
   array (
