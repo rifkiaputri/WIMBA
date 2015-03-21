@@ -71,6 +71,7 @@ and open the template in the editor.
 
 #content {
     border-top-color: #990000;
+    font-size: 15px;
 }
 
 #sidebar div.block span.blockTitle {
@@ -80,14 +81,14 @@ and open the template in the editor.
     border-radius: 4px;
     margin-top: 20px;
     margin-bottom: 5px;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Oswald', serif;
     letter-spacing: 0em;
 }
 
 #sidebar div.block {
     padding-bottom: 0px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 #sidebarNavigation div.block {
@@ -203,7 +204,7 @@ input.textField, select.selectMenu, textarea.textArea, input.uploadField {
 }
 
 #adminSidebar #content > ul > li {
-    font-size: 12px;
+    font-size: 13px;
     display: block;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -246,7 +247,7 @@ input.textField, select.selectMenu, textarea.textArea, input.uploadField {
 }
 
 #adminSidebar #content ul li.title {
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Oswald', serif;
     text-transform: uppercase;
     display: block;
