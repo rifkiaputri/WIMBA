@@ -15,10 +15,10 @@
 {/if}
 {include file="common/header.tpl"}
 
-{translate key="plugins.generic.staticPages.editInstructions"}
+{*{translate key="plugins.generic.staticPages.editInstructions"}
 <br />
 {translate key="plugins.generic.staticPages.viewInstructions" pagesPath=$pagesPath|replace:"REPLACEME":"%PATH%"}
-<br />
+<br />*}
 <br />
 
 <form method="post" id="editStaticPageForm" action="{if $staticPageId}{plugin_url path="save"|to_array:$staticPageId}{else}{plugin_url path="save"}{/if}" >
@@ -41,10 +41,10 @@
 		</td>
 	</tr>
 {/if}
-	<tr>
+	{*<tr>
 		<td width="20%" class="label">{fieldLabel required="true" name="pagePath" key="plugins.generic.staticPages.path"}</td>
 		<td width="80%" class="value" ><input type="text" name="pagePath" value="{$pagePath|escape}" size="40" id="path" maxlength="50" class="textField" /></td>
-	</tr>
+	</tr>*}
 	<tr>
 		<td width="20%" class="label">{fieldLabel required="true" name="title" key="plugins.generic.staticPages.pageTitle"}</td>
 		<td width="80%" class="value" ><input type="text" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="40" id="title" maxlength="50" class="textField" /></td>

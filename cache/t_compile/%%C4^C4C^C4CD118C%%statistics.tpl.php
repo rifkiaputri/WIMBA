@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-07 08:09:27
+<?php /* Smarty version 2.6.26, created on 2015-03-20 11:22:58
          compiled from manager/statistics/statistics.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'manager/statistics/statistics.tpl', 14, false),array('function', 'url', 'manager/statistics/statistics.tpl', 18, false),array('function', 'fieldLabel', 'manager/statistics/statistics.tpl', 25, false),array('function', 'math', 'manager/statistics/statistics.tpl', 100, false),array('modifier', 'escape', 'manager/statistics/statistics.tpl', 29, false),array('modifier', 'default', 'manager/statistics/statistics.tpl', 113, false),)), $this); ?>
@@ -166,4 +166,4 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'translate',
 <input type="submit" class="button defaultButton" value="<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "common.record"), $this);?>
 "/>
 </form>
-</div>
+</div>

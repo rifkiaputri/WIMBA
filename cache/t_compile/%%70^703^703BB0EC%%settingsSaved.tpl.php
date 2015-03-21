@@ -1,7 +1,11 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 11:52:46
+<?php /* Smarty version 2.6.26, created on 2015-03-20 16:32:33
          compiled from manager/setup/settingsSaved.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'manager/setup/settingsSaved.tpl', 14, false),array('function', 'url', 'manager/setup/settingsSaved.tpl', 17, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'manager/setup/settingsSaved.tpl', 12, false),array('function', 'translate', 'manager/setup/settingsSaved.tpl', 17, false),)), $this); ?>
+<script>
+    document.location.href='<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'setup','path' => '3','escape' => false), $this);?>
+'; 
+ </script>
 <?php $this->assign('pageTitle', "manager.setup.journalSetup"); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "manager/setup/setupHeader.tpl", 'smarty_include_vars' => array()));
@@ -51,3 +55,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", '
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+

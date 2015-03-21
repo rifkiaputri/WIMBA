@@ -10,17 +10,32 @@
   'contributors' => 
   array (
   ),
+  'copyrightHolderType' => '',
+  'copyrightNoticeAgree' => false,
+  'copyrightYearBasis' => '',
+  'copySubmissionAckAddress' => '',
+  'copySubmissionAckPrimaryContact' => false,
+  'copySubmissionAckSpecified' => false,
   'displayCurrentIssue' => false,
   'emailSignature' => '________________________________________________________________________
 Test Journal
 http://localhost/ojs-2.4.5/index.php/test',
   'envelopeSender' => '',
   'fastTrackFee' => 0,
+  'includeCopyrightStatement' => false,
+  'includeLicense' => false,
   'itemsPerPage' => 25,
   'journalTheme' => '',
+  'licenseURL' => '',
   'mailingAddress' => '',
   'membershipFee' => 0,
-  'metaCitations' => true,
+  'metaCitationOutputFilterId' => 0,
+  'metaCitations' => false,
+  'metaCoverage' => false,
+  'metaDiscipline' => false,
+  'metaSubject' => false,
+  'metaSubjectClass' => false,
+  'metaType' => false,
   'numPageLinks' => 10,
   'numWeeksPerReview' => 4,
   'onlineIssn' => '',
@@ -29,6 +44,8 @@ http://localhost/ojs-2.4.5/index.php/test',
   'publisherInstitution' => '',
   'publisherUrl' => '',
   'purchaseArticleFee' => 0,
+  'requireAuthorCompetingInterests' => false,
+  'requireReviewerCompetingInterests' => false,
   'rtAbstract' => true,
   'rtAddComment' => true,
   'rtCaptureCite' => true,
@@ -48,20 +65,20 @@ http://localhost/ojs-2.4.5/index.php/test',
   ),
   'supportedLocales' => 
   array (
-    0 => 'id_ID',
-    1 => 'en_US',
+    0 => 'en_US',
+    1 => 'id_ID',
   ),
   'supportedSubmissionLocales' => 
   array (
     0 => 'en_US',
   ),
-  'supportEmail' => 'chrestellastephanie@gmail.com',
-  'supportName' => 'Chrestella',
+  'supportEmail' => 'rachmawatyy@gmail.com',
+  'supportName' => 'Rachmawaty',
   'supportPhone' => '',
   'useEditorialBoard' => false,
   'authorInformation' => 
   array (
-    'en_US' => 'Interested in submitting to this journal? We recommend that you review the <a href="http://localhost/ojs-2.4.5/index.php/test/about">About the Journal</a> page for the journal\'s section policies, as well as the <a href="http://localhost/ojs-2.4.5/index.php/test/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/ojs-2.4.5/index.php/test/user/register">register</a> with the journal prior to submitting or, if already registered, can simply <a href="http://localhost/ojs-2.4.5/index.php/index/login">log in</a> and begin the five-step process.',
+    'en_US' => 'Interested in submitting to this journal? We recommend that you review the <a href="/ojs-2.4.5/index.php/test/about">About the Journal</a> page for the journal\'s section policies, as well as the <a href="/ojs-2.4.5/index.php/test/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="/ojs-2.4.5/index.php/test/user/register">register</a> with the journal prior to submitting or, if already registered, can simply <a href="/ojs-2.4.5/index.php/index/login">log in</a> and begin the five-step process.',
   ),
   'authorSelfArchivePolicy' => 
   array (
@@ -119,6 +136,10 @@ Please follow the following protocol for making electronic revisions to your man
 <li><strong>Final copyedit.</strong> The journal copy editor will verify changes made by the author and incorporate the responses to the author queries to create a final manuscript. When finished, the copy editor will upload the final document through the journal Web site and alert the layout editor to complete formatting.</li>
 </ol>',
   ),
+  'description' => 
+  array (
+    'en_US' => 'lalalalallala',
+  ),
   'donationFeeDescription' => 
   array (
     'en_US' => 'Donations of any amount to this journal are gratefully received and provide a means for the editors to continue to provide a journal of the highest quality to its readers.',
@@ -137,7 +158,7 @@ Please follow the following protocol for making electronic revisions to your man
   ),
   'initials' => 
   array (
-    'en_US' => 'TJ',
+    'en_US' => 'WIMBA',
   ),
   'librarianInformation' => 
   array (
@@ -220,7 +241,7 @@ Please follow the following protocol for making electronic revisions to your man
   ),
   'readerInformation' => 
   array (
-    'en_US' => 'We encourage readers to sign up for the publishing notification service for this journal. Use the <a href="http://localhost/ojs-2.4.5/index.php/test/user/register">Register</a> link at the top of the home page for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal\'s <a href="http://localhost/ojs-2.4.5/index.php/test/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.',
+    'en_US' => 'We encourage readers to sign up for the publishing notification service for this journal. Use the <a href="/ojs-2.4.5/index.php/test/user/register">Register</a> link at the top of the home page for the journal. This registration will result in the reader receiving the Table of Contents by email for each new issue of the journal. This list also allows the journal to claim a certain level of support or readership. See the journal\'s <a href="/ojs-2.4.5/index.php/test/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.',
   ),
   'refLinkInstructions' => 
   array (
@@ -253,33 +274,33 @@ Please follow the following protocol for making electronic revisions to your man
     array (
       0 => 
       array (
-        'content' => 'The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).',
         'order' => '1',
+        'content' => 'The submission has not been previously published, nor is it before another journal for consideration (or an explanation has been provided in Comments to the Editor).',
       ),
       1 => 
       array (
-        'content' => 'The submission file is in OpenOffice, Microsoft Word, RTF, or WordPerfect document file format.',
         'order' => '2',
+        'content' => 'The submission file is in OpenOffice, Microsoft Word, RTF, or WordPerfect document file format.',
       ),
       2 => 
       array (
-        'content' => 'Where available, URLs for the references have been provided.',
         'order' => '3',
+        'content' => 'Where available, URLs for the references have been provided.',
       ),
       3 => 
       array (
-        'content' => 'The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.',
         'order' => '4',
+        'content' => 'The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.',
       ),
       4 => 
       array (
-        'content' => 'The text adheres to the stylistic and bibliographic requirements outlined in the <a href="http://localhost/ojs-2.4.5/index.php/test/about/submissions#authorGuidelines" target="_new">Author Guidelines</a>, which is found in About the Journal.',
         'order' => '5',
+        'content' => 'The text adheres to the stylistic and bibliographic requirements outlined in the <a href="/ojs-2.4.5/index.php/test/about/submissions#authorGuidelines" target="_new">Author Guidelines</a>, which is found in About the Journal.',
       ),
       5 => 
       array (
-        'content' => 'If submitting to a peer-reviewed section of the journal, the instructions in <a href="javascript:openHelp(\'http://localhost/ojs-2.4.5/index.php/test/help/view/editorial/topic/000044\')">Ensuring a Blind Review</a> have been followed.',
         'order' => '6',
+        'content' => 'If submitting to a peer-reviewed section of the journal, the instructions in <a href="javascript:openHelp(\'http://localhost/ojs-2.4.5/index.php/test/help/view/editorial/topic/000044\')">Ensuring a Blind Review</a> have been followed.',
       ),
     ),
   ),

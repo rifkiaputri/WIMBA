@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-14 20:43:15
+<?php /* Smarty version 2.6.26, created on 2015-03-20 11:30:00
          compiled from notification/index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'notification/index.tpl', 19, false),array('function', 'url', 'notification/index.tpl', 25, false),array('function', 'page_info', 'notification/index.tpl', 50, false),array('function', 'page_links', 'notification/index.tpl', 51, false),array('modifier', 'escape', 'notification/index.tpl', 25, false),)), $this); ?>
@@ -68,3 +68,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "common/footer.tpl", '
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+

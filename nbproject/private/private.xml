@@ -3,17 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/styles/wimba.css</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/pages/manager/PeopleHandler.inc.php</file>
             <file>file:/C:/xampp2/htdocs/ojs-2.4.5/lib/pkp/templates/common/header.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/author/submit/step3.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/index/journal.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/index/site.tpl</file>
+            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/manager/files/index.tpl</file>
             <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/manager/index.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/author/submit/step2.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/admin/index.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/author/submit/step1.tpl</file>
+            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/common/journalManagement.tpl</file>
+            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/lib/pkp/styles/themes/default/theme.css</file>
             <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/user/index.tpl</file>
+            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/cache/t_compile/%25%2538%5E38D%5E38D7420B%25%25article.tpl.php</file>
         </group>
     </open-files>
 </project-private>

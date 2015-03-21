@@ -1,20 +1,40 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-19 10:25:44
+<?php /* Smarty version 2.6.26, created on 2015-03-21 04:01:54
          compiled from common/navbar.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'common/navbar.tpl', 13, false),array('function', 'translate', 'common/navbar.tpl', 13, false),array('function', 'call_hook', 'common/navbar.tpl', 43, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'common/navbar.tpl', 20, false),array('function', 'translate', 'common/navbar.tpl', 20, false),array('function', 'call_hook', 'common/navbar.tpl', 62, false),array('block', 'iterate', 'common/navbar.tpl', 24, false),array('modifier', 'escape', 'common/navbar.tpl', 25, false),)), $this); ?>
+ <?php 
+    $templateMgr = TemplateManager::getManager();
+    $journal =& Request::getJournal();
+    $issueDao =& DAORegistry::getDAO('IssueDAO');
+    $publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
+    $templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
+ ?>
 <div id="navbar">
 	<ul class="menu">
 		<li id="home"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'index'), $this);?>
 "><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "navigation.home"), $this);?>
 </a></li>
-		<li id="about"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'about'), $this);?>
+		<li id="about"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'pages','op' => 'view','path' => 'about'), $this);?>
 "><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "navigation.about"), $this);?>
 </a></li>
-                <li id="guide"><a href="http://localhost/ojs-2.4.5/index.php/test/pages/view/guide">Submission Guide</a></li>
-                <li id="template"><a href="http://localhost/ojs-2.4.5/index.php/test/pages/view/templates">Templates</a></li>
-                <li id="contact"><a href="http://localhost/ojs-2.4.5/index.php/test/pages/view/contact">Contact</a></li>
+				<li id="article"><a>Article</a>
+					<ul>
+                                            <?php $this->_tag_stack[] = array('iterate', array('from' => 'issues','item' => 'issue')); $_block_repeat=true;$this->_plugins['block']['iterate'][0][0]->smartyIterate($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
+						<li><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'issue','op' => 'view','path' => $this->_tpl_vars['issue']->getBestIssueId($this->_tpl_vars['currentJournal'])), $this);?>
+"><?php echo ((is_array($_tmp=$this->_tpl_vars['issue']->getIssueIdentification())) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
+</a>
+													</li>
+                                             <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo $this->_plugins['block']['iterate'][0][0]->smartyIterate($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
+					</ul>
+				</li>
+                <li id="guide"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'pages','op' => 'view','path' => 'guide'), $this);?>
+">Submission Guide</a></li>
+                <li id="template"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'pages','op' => 'view','path' => 'templates'), $this);?>
+">Templates</a></li>
+                <li id="contact"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'pages','op' => 'view','path' => 'contact'), $this);?>
+">Contact</a></li>
 		<?php if ($this->_tpl_vars['isUserLoggedIn']): ?>
-			<li id="userHome"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('journal' => 'index','page' => 'user'), $this);?>
+			<li id="userHome"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('journal' => 'wimba','page' => 'user'), $this);?>
 "><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "navigation.userHome"), $this);?>
 </a></li>
 		<?php else: ?>

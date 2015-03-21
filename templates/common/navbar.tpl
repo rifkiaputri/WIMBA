@@ -8,31 +8,34 @@
  * Navigation Bar
  *
  *}
+ {php}
+    $templateMgr = TemplateManager::getManager();
+    $journal =& Request::getJournal();
+    $issueDao =& DAORegistry::getDAO('IssueDAO');
+    $publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
+    $templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
+{/php}
 <div id="navbar">
 	<ul class="menu">
 		<li id="home"><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
-		<li id="about"><a href="{url page="about"}">{translate key="navigation.about"}</a></li>
-				<li id="article"><a href="#">Article</a>
+		<li id="about"><a href="{url page="pages" op="view" path="about"}">{translate key="navigation.about"}</a></li>
+				<li id="article"><a>Article</a>
 					<ul>
-						<li><a href="#">Article Dummy 1</a>
-							<ul>
-								<li><a href="#">Volume 1.1</a></li>
+                                            {iterate from=issues item=issue}
+						<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|escape}</a>
+							{*<ul>
+                                                                <li><a href="#">Volume 1.1</a></li>
 								<li><a href="#">Volume 1.2</a></li>
-							</ul>
+							</ul>*}
 						</li>
-						<li><a href="#">Article Dummy 2</a>
-							<ul>
-								<li><a href="#">Volume 2.1</a></li>
-								<li><a href="#">Volume 2.2</a></li>
-							</ul>
-						</li>
+                                             {/iterate}
 					</ul>
 				</li>
-                <li id="guide"><a href="http://localhost/ojs-2.4.5/index.php/test/pages/view/guide">Submission Guide</a></li>
-                <li id="template"><a href="http://localhost/ojs-2.4.5/index.php/test/pages/view/templates">Templates</a></li>
-                <li id="contact"><a href="http://localhost/ojs-2.4.5/index.php/test/pages/view/contact">Contact</a></li>
+                <li id="guide"><a href="{url page="pages" op="view" path="guide"}">Submission Guide</a></li>
+                <li id="template"><a href="{url page="pages" op="view" path="templates"}">Templates</a></li>
+                <li id="contact"><a href="{url page="pages" op="view" path="contact"}">Contact</a></li>
 		{if $isUserLoggedIn}
-			<li id="userHome"><a href="{url journal="index" page="user"}">{translate key="navigation.userHome"}</a></li>
+			<li id="userHome"><a href="{url journal="wimba" page="user"}">{translate key="navigation.userHome"}</a></li>
 		{else}
 			{if !$hideRegisterLink}
 				<li id="register"><a href="{url page="user" op="register"}">{translate key="navigation.register"}</a></li>

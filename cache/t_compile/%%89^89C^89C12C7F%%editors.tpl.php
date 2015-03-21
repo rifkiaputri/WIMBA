@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-16 03:47:52
+<?php /* Smarty version 2.6.26, created on 2015-03-20 08:22:58
          compiled from sectionEditor/submission/editors.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'sectionEditor/submission/editors.tpl', 12, false),array('function', 'url', 'sectionEditor/submission/editors.tpl', 13, false),array('function', 'icon', 'sectionEditor/submission/editors.tpl', 34, false),array('modifier', 'concat', 'sectionEditor/submission/editors.tpl', 32, false),array('modifier', 'to_array', 'sectionEditor/submission/editors.tpl', 33, false),array('modifier', 'strip_tags', 'sectionEditor/submission/editors.tpl', 33, false),array('modifier', 'assign', 'sectionEditor/submission/editors.tpl', 33, false),array('modifier', 'escape', 'sectionEditor/submission/editors.tpl', 34, false),array('modifier', 'date_format', 'sectionEditor/submission/editors.tpl', 62, false),)), $this); ?>
@@ -87,10 +87,7 @@ if ($this->_foreach['editAssignments']['total'] > 0):
 <?php if ($this->_tpl_vars['isEditor']): ?>
 	<input type="submit" class="button defaultButton" value="<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "common.record"), $this);?>
 "/>&nbsp;&nbsp;
-	<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'editor','op' => 'assignEditor','path' => 'sectionEditor','articleId' => $this->_tpl_vars['submission']->getId()), $this);?>
-" class="action"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.article.assignSectionEditor"), $this);?>
-</a>
-	|&nbsp;<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'editor','op' => 'assignEditor','path' => 'editor','articleId' => $this->_tpl_vars['submission']->getId()), $this);?>
+		|&nbsp;<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'editor','op' => 'assignEditor','path' => 'editor','articleId' => $this->_tpl_vars['submission']->getId()), $this);?>
 " class="action"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.article.assignEditor"), $this);?>
 </a>
 	<?php if (! $this->_tpl_vars['selfAssigned']): ?>|&nbsp;<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'editor','op' => 'assignEditor','path' => 'editor','editorId' => $this->_tpl_vars['userId'],'articleId' => $this->_tpl_vars['submission']->getId()), $this);?>
