@@ -3,9 +3,27 @@
 		<ul>
 			<li class="title">Management Pages</li>
 			<li>
-                                {assign var="pathPlugin" value="generic/staticpagesplugin/settings"}
+                                {assign var="pathPlugin" value="generic/staticpagesplugin/edit/1"}
 				<a href="{url op="plugin" path=$pathPlugin|explode:"/"}">
-					<span><img src="{$baseUrl}/icon/glyphicons-319-more-items.png">Manage Static Pages</span>
+					<span><img src="{$baseUrl}/icon/glyphicons-319-more-items.png">Edit Templates</span>
+				</a>
+			</li>
+                        <li>
+                                {assign var="pathPlugin" value="generic/staticpagesplugin/edit/2"}
+				<a href="{url op="plugin" path=$pathPlugin|explode:"/"}">
+					<span><img src="{$baseUrl}/icon/glyphicons-319-more-items.png">Edit Contact</span>
+				</a>
+			</li>
+                        <li>
+                                {assign var="pathPlugin" value="generic/staticpagesplugin/edit/3"}
+				<a href="{url op="plugin" path=$pathPlugin|explode:"/"}">
+					<span><img src="{$baseUrl}/icon/glyphicons-319-more-items.png">Edit Guide</span>
+				</a>
+			</li>
+                        <li>
+                                {assign var="pathPlugin" value="generic/staticpagesplugin/edit/4"}
+				<a href="{url op="plugin" path=$pathPlugin|explode:"/"}">
+					<span><img src="{$baseUrl}/icon/glyphicons-319-more-items.png">Edit About</span>
 				</a>
 			</li>
 			<li>
@@ -13,31 +31,31 @@
 					<span><img src="{$baseUrl}/icon/glyphicons-28-search.png">Files Browser</span>
 				</a>
 			</li>
-			<li>
+			{*<li>
 				<a href="{url op="sections"}">
 					<span><img src="{$baseUrl}/icon/glyphicons-609-newspaper.png">Journal Sections</span>
 				</a>
-			</li>
+			</li>*}
 			<li>
 				<a href="{url op="reviewForms"}">
 					<span><img src="{$baseUrl}/icon/glyphicons-40-notes.png">Review Forms</span>
 				</a>
 			</li>
-			<li>
+			{*<li>
 				<a href="{url op="languages"}">
 					<span><img src="{$baseUrl}/icon/glyphicons-245-conversation.png">Languages</span>
 				</a>
-			</li>
+			</li>*}
 			<li>
-				<a href="{url op="setup"}">
+				<a href="{url op="setup" path="3"}">
 					<span><img src="{$baseUrl}/icon/glyphicons-281-settings.png">Setup</span>
 				</a>
 			</li>
-			<li>
+			{*<li>
 				<a href="{url op="statistics"}">
 					<span><img src="{$baseUrl}/icon/glyphicons-41-stats.png">Stats & Reports</span>
 				</a>
-			</li>
+			</li>*}
 
 			{*<li class="title">Users</li>
 			<li>

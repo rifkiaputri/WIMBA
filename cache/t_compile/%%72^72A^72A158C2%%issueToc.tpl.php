@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-18 16:40:23
+<?php /* Smarty version 2.6.26, created on 2015-03-21 05:28:01
          compiled from editor/issues/issueToc.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'editor/issues/issueToc.tpl', 12, false),array('modifier', 'truncate', 'editor/issues/issueToc.tpl', 43, false),array('modifier', 'assign', 'editor/issues/issueToc.tpl', 57, false),array('modifier', 'strip_tags', 'editor/issues/issueToc.tpl', 99, false),array('function', 'url', 'editor/issues/issueToc.tpl', 25, false),array('function', 'translate', 'editor/issues/issueToc.tpl', 33, false),array('function', 'html_options', 'editor/issues/issueToc.tpl', 43, false),array('function', 'call_hook', 'editor/issues/issueToc.tpl', 53, false),array('function', 'icon', 'editor/issues/issueToc.tpl', 110, false),)), $this); ?>
@@ -32,13 +32,7 @@ $(document).ready(function() {
 		<li><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'createIssue'), $this);?>
 "><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.navigation.createIssue"), $this);?>
 </a></li>
-		<li<?php if ($this->_tpl_vars['unpublished']): ?> class="current"<?php endif; ?>><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'futureIssues'), $this);?>
-"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.navigation.futureIssues"), $this);?>
-</a></li>
-		<li<?php if (! $this->_tpl_vars['unpublished']): ?> class="current"<?php endif; ?>><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'backIssues'), $this);?>
-"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.navigation.issueArchive"), $this);?>
-</a></li>
-	</ul>
+			</ul>
 <?php endif; ?>
 
 <?php if (! $this->_tpl_vars['noIssue']): ?>
@@ -60,10 +54,7 @@ $(document).ready(function() {
 	<li><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'issueData','path' => $this->_tpl_vars['issueId']), $this);?>
 "><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.issues.issueData"), $this);?>
 </a></li>
-	<li><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'issueGalleys','path' => $this->_tpl_vars['issueId']), $this);?>
-"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.issues.galleys"), $this);?>
-</a></li>
-	<?php if ($this->_tpl_vars['unpublished']): ?><li><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'issue','op' => 'view','path' => $this->_tpl_vars['issue']->getBestIssueId()), $this);?>
+		<?php if ($this->_tpl_vars['unpublished']): ?><li><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'issue','op' => 'view','path' => $this->_tpl_vars['issue']->getBestIssueId()), $this);?>
 "><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.issues.previewIssue"), $this);?>
 </a></li><?php endif; ?>
 	<?php echo $this->_plugins['function']['call_hook'][0][0]->smartyCallHook(array('name' => "Templates::Editor::Issues::IssueToc::IssuePages"), $this);?>

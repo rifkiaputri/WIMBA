@@ -1,7 +1,8 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-16 04:10:59
+<?php /* Smarty version 2.6.26, created on 2015-03-24 00:34:12
          compiled from sectionEditor/submission/copyedit.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'sectionEditor/submission/copyedit.tpl', 12, false),array('function', 'url', 'sectionEditor/submission/copyedit.tpl', 15, false),array('function', 'icon', 'sectionEditor/submission/copyedit.tpl', 46, false),array('modifier', 'escape', 'sectionEditor/submission/copyedit.tpl', 22, false),array('modifier', 'assign', 'sectionEditor/submission/copyedit.tpl', 43, false),array('modifier', 'date_format', 'sectionEditor/submission/copyedit.tpl', 58, false),array('modifier', 'default', 'sectionEditor/submission/copyedit.tpl', 58, false),array('modifier', 'to_array', 'sectionEditor/submission/copyedit.tpl', 95, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'sectionEditor/submission/copyedit.tpl', 13, false),array('function', 'url', 'sectionEditor/submission/copyedit.tpl', 16, false),array('function', 'icon', 'sectionEditor/submission/copyedit.tpl', 47, false),array('modifier', 'escape', 'sectionEditor/submission/copyedit.tpl', 23, false),array('modifier', 'assign', 'sectionEditor/submission/copyedit.tpl', 44, false),array('modifier', 'date_format', 'sectionEditor/submission/copyedit.tpl', 59, false),array('modifier', 'default', 'sectionEditor/submission/copyedit.tpl', 59, false),array('modifier', 'to_array', 'sectionEditor/submission/copyedit.tpl', 96, false),)), $this); ?>
+ 
 <div id="copyedit">
 <h3><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "submission.copyediting"), $this);?>
 </h3>

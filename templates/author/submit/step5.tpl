@@ -8,7 +8,7 @@
  * Step 5 of author article submission.
  *
  *}
-{assign var="pageTitle" value="author.submit.step5"}
+{assign var="pageTitle" value="author.submit.step4"}
 {include file="author/submit/submitHeader.tpl"}
 
 <p>{translate key="author.submit.confirmationDescription" journalTitle=$journal->getLocalizedTitle()}</p>

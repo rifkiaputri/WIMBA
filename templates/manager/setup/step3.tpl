@@ -7,7 +7,7 @@
  *
  * Step 3 of journal setup.
  *}
-{assign var="pageTitle" value="manager.setup.guidingSubmissions"}
+{assign var="pageTitle" value="manager.setup.journalSetup"}
 {include file="manager/setup/setupHeader.tpl"}
 
 <form name="setupForm" id="setupForm" method="post" action="{url op="saveSetup" path="3"}">
@@ -27,7 +27,7 @@
 </table>
 </div>
 {/if}
-
+{*
 <div id="authorGuidelinesInfo">
 <h3>3.1 {translate key="manager.setup.authorGuidelines"}</h3>
 
@@ -38,6 +38,7 @@
 </p>
 
 </div>
+*}
 
 <div id="submissionPreparationChecklist">
 <h4>{translate key="manager.setup.submissionPreparationChecklist"}</h4>
@@ -69,7 +70,7 @@
 </div>
 
 <div class="separator"></div>
-
+{*
 <div id="permissions">
 <h3>3.2 {translate key="submission.permissions"}</h3>
 
@@ -472,6 +473,7 @@
 </div>
 
 <div class="separator"></div>
+*}
 
 <p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="setup" escape=false}'" /></p>
 

@@ -69,9 +69,9 @@
 	{/foreach}
 </table>
 {if $isEditor}
-	<input type="submit" class="button defaultButton" value="{translate key="common.record"}"/>&nbsp;&nbsp;
+	{*<input type="submit" class="button defaultButton" value="{translate key="common.record"}"/>&nbsp;&nbsp;*}
 	{*<a href="{url page="editor" op="assignEditor" path="sectionEditor" articleId=$submission->getId()}" class="action">{translate key="editor.article.assignSectionEditor"}</a>*}
-	|&nbsp;<a href="{url page="editor" op="assignEditor" path="editor" articleId=$submission->getId()}" class="action">{translate key="editor.article.assignEditor"}</a>
+	&nbsp;<a href="{url page="editor" op="assignEditor" path="editor" articleId=$submission->getId()}" class="action">{translate key="editor.article.assignEditor"}</a>
 	{if !$selfAssigned}|&nbsp;<a href="{url page="editor" op="assignEditor" path="editor" editorId=$userId articleId=$submission->getId()}" class="action">{translate key="common.addSelf"}</a>{/if}
 {/if}
 </form>

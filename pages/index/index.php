@@ -20,6 +20,7 @@ switch ($op) {
 	case 'index':
 		define('HANDLER_CLASS', 'IndexHandler');
 		import('pages.index.IndexHandler');
+                import('pages.issue.IssueHandler');
 		break;
 }
 

@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-19 19:17:09
+<?php /* Smarty version 2.6.26, created on 2015-03-20 16:05:12
          compiled from file:C:%5Cxampp2%5Chtdocs%5Cojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 18, false),array('function', 'plugin_url', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 24, false),array('function', 'fieldLabel', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 35, false),array('function', 'form_language_chooser', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 39, false),array('modifier', 'replace', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 20, false),array('modifier', 'to_array', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 24, false),array('modifier', 'assign', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 37, false),array('modifier', 'escape', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 46, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'plugin_url', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 24, false),array('function', 'fieldLabel', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 35, false),array('function', 'form_language_chooser', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 39, false),array('function', 'translate', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 40, false),array('modifier', 'to_array', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 24, false),array('modifier', 'assign', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 37, false),array('modifier', 'escape', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/generic/staticPages/editStaticPageForm.tpl', 50, false),)), $this); ?>
 <?php if ($this->_tpl_vars['staticPageId']): ?>
 	<?php $this->assign('pageTitle', "plugins.generic.staticPages.editStaticPage"); ?>
 <?php else: ?>
@@ -13,12 +13,6 @@ $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
 
-<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "plugins.generic.staticPages.editInstructions"), $this);?>
-
-<br />
-<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "plugins.generic.staticPages.viewInstructions",'pagesPath' => ((is_array($_tmp=$this->_tpl_vars['pagesPath'])) ? $this->_run_mod_handler('replace', true, $_tmp, 'REPLACEME', "%PATH%") : smarty_modifier_replace($_tmp, 'REPLACEME', "%PATH%"))), $this);?>
-
-<br />
 <br />
 
 <form method="post" id="editStaticPageForm" action="<?php if ($this->_tpl_vars['staticPageId']): ?><?php echo $this->_plugins['function']['plugin_url'][0][0]->smartyPluginUrl(array('path' => ((is_array($_tmp='save')) ? $this->_run_mod_handler('to_array', true, $_tmp, $this->_tpl_vars['staticPageId']) : $this->_plugins['modifier']['to_array'][0][0]->smartyToArray($_tmp, $this->_tpl_vars['staticPageId']))), $this);?>
@@ -53,13 +47,7 @@ unset($_smarty_tpl_vars);
 		</td>
 	</tr>
 <?php endif; ?>
-	<tr>
-		<td width="20%" class="label"><?php echo $this->_plugins['function']['fieldLabel'][0][0]->smartyFieldLabel(array('required' => 'true','name' => 'pagePath','key' => "plugins.generic.staticPages.path"), $this);?>
-</td>
-		<td width="80%" class="value" ><input type="text" name="pagePath" value="<?php echo ((is_array($_tmp=$this->_tpl_vars['pagePath'])) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
-" size="40" id="path" maxlength="50" class="textField" /></td>
-	</tr>
-	<tr>
+		<tr>
 		<td width="20%" class="label"><?php echo $this->_plugins['function']['fieldLabel'][0][0]->smartyFieldLabel(array('required' => 'true','name' => 'title','key' => "plugins.generic.staticPages.pageTitle"), $this);?>
 </td>
 		<td width="80%" class="value" ><input type="text" name="title[<?php echo ((is_array($_tmp=$this->_tpl_vars['formLocale'])) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>

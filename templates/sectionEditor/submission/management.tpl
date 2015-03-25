@@ -52,7 +52,7 @@
 				{else}
 					{$suppFile->getDateSubmitted()|date_format:$dateFormatShort}&nbsp;&nbsp;
 				{/if}
-				<a href="{url op="editSuppFile" from="submission" path=$submission->getId()|to_array:$suppFile->getId()}" class="action">{translate key="common.edit"}</a>
+				{*<a href="{url op="editSuppFile" from="submission" path=$submission->getId()|to_array:$suppFile->getId()}" class="action">{translate key="common.edit"}</a>
 				&nbsp;|&nbsp;
 				<a href="{url op="deleteSuppFile" from="submission" path=$submission->getId()|to_array:$suppFile->getId()}" onclick="return confirm('{translate|escape:"jsparam" key="author.submit.confirmDeleteSuppFile"}')" class="action">{translate key="common.delete"}</a>
 				{if !$notFirst}
@@ -60,9 +60,10 @@
 					<a href="{url op="addSuppFile" from="submission" path=$submission->getId()}" class="action">{translate key="submission.addSuppFile"}</a>
 				{/if}
 				<br />
-				{assign var=notFirst value=1}
+				{assign var=notFirst value=1}*}
 			{foreachelse}
-				{translate key="common.none"}&nbsp;&nbsp;&nbsp;&nbsp;<a href="{url op="addSuppFile" from="submission" path=$submission->getId()}" class="action">{translate key="submission.addSuppFile"}</a>
+                                {*
+				{translate key="common.none"}&nbsp;&nbsp;&nbsp;&nbsp;<a href="{url op="addSuppFile" from="submission" path=$submission->getId()}" class="action">{translate key="submission.addSuppFile"}</a>*}
 			{/foreach}
 		</td>
 	</tr>
@@ -80,9 +81,9 @@
 		<td>{$submission->getDateSubmitted()|date_format:$dateFormatShort}</td>
 	</tr>
 	<tr>
-		<td class="label">{translate key="section.section"}</td>
+		{*<td class="label">{translate key="section.section"}</td>
 		<td class="value">{$submission->getSectionTitle()|escape}</td>
-		<td class="value"><form action="{url op="updateSection" path=$submission->getId()}" method="post">{translate key="submission.changeSection"} <select name="section" size="1" class="selectMenu">{html_options options=$sections selected=$submission->getSectionId()}</select> <input type="submit" value="{translate key="common.record"}" class="button" /></form></td>
+		<td class="value"><form action="{url op="updateSection" path=$submission->getId()}" method="post">{translate key="submission.changeSection"} <select name="section" size="1" class="selectMenu">{html_options options=$sections selected=$submission->getSectionId()}</select> <input type="submit" value="{translate key="common.record"}" class="button" /></form></td>*}
 	</tr>
 	{if $submission->getCommentsToEditor()}
 	<tr valign="top">

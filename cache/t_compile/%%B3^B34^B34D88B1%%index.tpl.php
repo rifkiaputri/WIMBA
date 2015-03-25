@@ -1,22 +1,12 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-19 16:21:44
+<?php /* Smarty version 2.6.26, created on 2015-03-24 06:39:30
          compiled from user/index.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'user/index.tpl', 18, false),array('function', 'translate', 'user/index.tpl', 18, false),array('function', 'call_hook', 'user/index.tpl', 19, false),array('modifier', 'escape', 'user/index.tpl', 26, false),array('modifier', 'assign', 'user/index.tpl', 181, false),array('modifier', 'date_format', 'user/index.tpl', 237, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'user/index.tpl', 23, false),array('function', 'url', 'user/index.tpl', 28, false),array('function', 'call_hook', 'user/index.tpl', 168, false),array('modifier', 'escape', 'user/index.tpl', 26, false),array('modifier', 'assign', 'user/index.tpl', 182, false),array('modifier', 'date_format', 'user/index.tpl', 238, false),)), $this); ?>
 <?php echo ''; ?><?php $this->assign('pageTitle', "user.userHome"); ?><?php echo ''; ?><?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "common/header.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?><?php echo ''; ?>
-
-
-<?php if ($this->_tpl_vars['isSiteAdmin']): ?>
-	<?php $this->assign('hasRole', 1); ?>
-	&#187; <a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('journal' => 'index','page' => $this->_tpl_vars['isSiteAdmin']->getRolePath()), $this);?>
-"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => $this->_tpl_vars['isSiteAdmin']->getRoleName()), $this);?>
-</a>
-	<?php echo $this->_plugins['function']['call_hook'][0][0]->smartyCallHook(array('name' => "Templates::User::Index::Site"), $this);?>
-
-<?php endif; ?>
 
 <div id="myJournals">
 <?php if (! $this->_tpl_vars['currentJournal']): ?><h3><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "user.myJournals"), $this);?>
@@ -38,16 +28,14 @@ unset($_smarty_tpl_vars);
 	<table width="100%" class="info">
 		<?php if ($this->_tpl_vars['isValid']['JournalManager'][$this->_tpl_vars['journalId']]): ?>
 			<tr>
-				<td>&#187; <a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('journal' => $this->_tpl_vars['journalPath'],'page' => 'manager'), $this);?>
+                                <?php $this->assign('pathJournalManager', "setup/3"); ?>
+				<td>&#187; <a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('journal' => $this->_tpl_vars['journalPath'],'page' => 'manager','op' => 'setup','path' => '3'), $this);?>
 "><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "user.role.manager"), $this);?>
 </a></td>
 				<td></td>
 				<td></td>
 				<td></td>
-				<td align="right"><?php if ($this->_tpl_vars['setupIncomplete'][$this->_tpl_vars['journalId']]): ?>[<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('journal' => $this->_tpl_vars['journalPath'],'page' => 'manager','op' => 'setup','path' => '1'), $this);?>
-"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "manager.setup"), $this);?>
-</a>]<?php endif; ?></td>
-			</tr>
+							</tr>
 		<?php endif; ?>
 		<?php if ($this->_tpl_vars['isValid']['SubscriptionManager'][$this->_tpl_vars['journalId']]): ?>
 			<tr>

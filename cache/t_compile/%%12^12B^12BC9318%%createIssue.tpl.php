@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-18 16:38:35
+<?php /* Smarty version 2.6.26, created on 2015-03-21 05:32:48
          compiled from editor/issues/createIssue.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'editor/issues/createIssue.tpl', 13, false),array('function', 'translate', 'editor/issues/createIssue.tpl', 20, false),array('function', 'html_options', 'editor/issues/createIssue.tpl', 28, false),array('function', 'fieldLabel', 'editor/issues/createIssue.tpl', 40, false),array('function', 'form_language_chooser', 'editor/issues/createIssue.tpl', 43, false),array('function', 'html_select_date', 'editor/issues/createIssue.tpl', 95, false),array('modifier', 'assign', 'editor/issues/createIssue.tpl', 13, false),array('modifier', 'escape', 'editor/issues/createIssue.tpl', 28, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'editor/issues/createIssue.tpl', 13, false),array('function', 'translate', 'editor/issues/createIssue.tpl', 20, false),array('function', 'html_options', 'editor/issues/createIssue.tpl', 29, false),array('function', 'fieldLabel', 'editor/issues/createIssue.tpl', 41, false),array('function', 'form_language_chooser', 'editor/issues/createIssue.tpl', 44, false),array('function', 'html_select_date', 'editor/issues/createIssue.tpl', 96, false),array('modifier', 'assign', 'editor/issues/createIssue.tpl', 13, false),array('modifier', 'escape', 'editor/issues/createIssue.tpl', 29, false),)), $this); ?>
 <?php echo ''; ?><?php $this->assign('pageTitle', "editor.issues.createIssue"); ?><?php echo ''; ?><?php echo ((is_array($_tmp=$this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'editor','op' => 'createIssue'), $this))) ? $this->_run_mod_handler('assign', true, $_tmp, 'currentUrl') : $this->_plugins['modifier']['assign'][0][0]->smartyAssign($_tmp, 'currentUrl'));?><?php echo ''; ?><?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "common/header.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;
@@ -19,13 +19,7 @@ unset($_smarty_tpl_vars);
 	<li class="current"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'createIssue'), $this);?>
 "><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.navigation.createIssue"), $this);?>
 </a></li>
-	<li><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'futureIssues'), $this);?>
-"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.navigation.futureIssues"), $this);?>
-</a></li>
-	<li><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'backIssues'), $this);?>
-"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.navigation.issueArchive"), $this);?>
-</a></li>
-</ul>
+	</ul>
 
 <br />
 

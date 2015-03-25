@@ -8,6 +8,9 @@
  * Show confirmation after saving settings.
  *
  *}
+<script>
+    document.location.href='{url op="setup" path="3" escape=false}'; 
+ </script>
 {assign var="pageTitle" value="manager.setup.journalSetup"}
 {include file="manager/setup/setupHeader.tpl"}
 

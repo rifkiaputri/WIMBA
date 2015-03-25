@@ -58,9 +58,9 @@ function sortSearch(heading, direction) {
 		{html_options_translate options=$fieldOptions selected=$searchField}
 	</select>
 	<select name="searchMatch" size="1" class="selectMenu">
-		<option value="contains"{if $searchMatch == 'contains'} selected="selected"{/if}>{translate key="form.contains"}</option>
-		<option value="is"{if $searchMatch == 'is'} selected="selected"{/if}>{translate key="form.is"}</option>
-		<option value="startsWith"{if $searchMatch == 'startsWith'} selected="selected"{/if}>{translate key="form.startsWith"}</option>
+            <option value="contains"{if $searchMatch == 'contains'} selected="selected"{/if}>{translate key="form.contains"}</option>
+            <option value="is"{if $searchMatch == 'is'} selected="selected"{/if}>{translate key="form.is"}</option>
+            <option value="startsWith"{if $searchMatch == 'startsWith'} selected="selected"{/if}>{translate key="form.startsWith"}</option>
 	</select>
 	<input type="text" size="15" name="search" class="textField" value="{$search|escape}" />
 	<br/>

@@ -282,18 +282,16 @@ allowed_html = "<a href|target> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> 
 [email]
 
 ; Use SMTP for sending mail instead of mail()
-; smtp = On
+smtp = On
 
 ; SMTP server settings
-; smtp_server = mail.example.com
-; smtp_port = 25
+smtp_server = "ssl://smtp.gmail.com"
+smtp_port = 465
 
 ; Enable SMTP authentication
-; Supported mechanisms: PLAIN, LOGIN, CRAM-MD5, and DIGEST-MD5
-; smtp_auth = PLAIN
-; smtp_username = username
-; smtp_password = password
-
+smtp_auth = PLAIN
+smtp_username = "destra.bintang.perkasa@gmail.com"
+smtp_password = "22.7cil337872" 
 ; Allow envelope sender to be specified
 ; (may not be possible with some server configurations)
 ; allow_envelope_sender = Off

@@ -19,14 +19,20 @@
 	<ul class="menu">
 		<li id="home"><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
 		<li id="about"><a href="{url page="pages" op="view" path="about"}">{translate key="navigation.about"}</a></li>
-				<li id="article"><a>Article</a>
+				<li id="article"><a>Article &#9662;</a>
 					<ul>
                                             {iterate from=issues item=issue}
-						<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId($currentJournal)}">{$issue->getIssueIdentification()|escape}</a>
-							{*<ul>
-                                                                <li><a href="#">Volume 1.1</a></li>
-								<li><a href="#">Volume 1.2</a></li>
-							</ul>*}
+						<li><a>{$issue->getYear()} &#9656;</a>
+							<ul>
+                                                            {assign var="year" value=$issue->getYear()}
+                                                            {php}
+                                                                $publishedIssuesByYear = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $this->get_template_vars('year'));
+                                                                while($issueYear = $publishedIssuesByYear->next()){
+                                                                //echo'a';    
+                                                                    echo '<li><a href="'.Request::url(null, "issue", "view", $issueYear->getBestIssueId($currentJournal), null, null, false).'">'.$issueYear->getIssueIdentification().'</a></li>'; 
+                                                                }
+                                                            {/php}
+							</ul>
 						</li>
                                              {/iterate}
 					</ul>

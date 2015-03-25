@@ -289,7 +289,7 @@
   'submission.layout.galleyStyle' => 'Style',
   'submission.layout.initialGalleyCreation' => 'Initial Galley Creation',
   'submission.layout.layoutFile' => 'Layout File',
-  'submission.layout' => 'Layout',
+  'submission.layout' => 'Upload Final Version',
   'submission.layout.layoutVersion' => 'Layout Version',
   'submission.layout.newGalley' => 'Create New Galley',
   'submission.layout.newSupplementaryFile' => 'Upload New Supplementary File',

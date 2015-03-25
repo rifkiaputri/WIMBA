@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-16 03:55:33
+<?php /* Smarty version 2.6.26, created on 2015-03-24 07:24:14
          compiled from sectionEditor/submission/editorDecision.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'sectionEditor/submission/editorDecision.tpl', 12, false),array('function', 'url', 'sectionEditor/submission/editorDecision.tpl', 18, false),array('function', 'html_options_translate', 'sectionEditor/submission/editorDecision.tpl', 21, false),array('function', 'icon', 'sectionEditor/submission/editorDecision.tpl', 48, false),array('modifier', 'escape', 'sectionEditor/submission/editorDecision.tpl', 23, false),array('modifier', 'date_format', 'sectionEditor/submission/editorDecision.tpl', 34, false),array('modifier', 'assign', 'sectionEditor/submission/editorDecision.tpl', 43, false),array('modifier', 'to_array', 'sectionEditor/submission/editorDecision.tpl', 113, false),array('modifier', 'count', 'sectionEditor/submission/editorDecision.tpl', 126, false),)), $this); ?>
@@ -119,18 +119,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'translate',
 	<?php elseif ($this->_tpl_vars['lastDecision'] == SUBMISSION_EDITOR_DECISION_ACCEPT): ?>
 		<tr valign="top">
 			<td width="20%">&nbsp;</td>
-			<td width="80%">
-				<?php if (! ( $this->_tpl_vars['editorRevisionExists'] || $this->_tpl_vars['authorRevisionExists'] || $this->_tpl_vars['reviewVersionExists'] ) || ! $this->_tpl_vars['submission']->getMostRecentEditorDecisionComment()): ?><?php $this->assign('copyeditingUnavailable', 1); ?><?php else: ?><?php $this->assign('copyeditingUnavailable', 0); ?><?php endif; ?>
-				<input type="submit" <?php if ($this->_tpl_vars['copyeditingUnavailable']): ?>disabled="disabled" <?php endif; ?>name="setCopyeditFile" value="<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.submissionReview.sendToCopyediting"), $this);?>
-" class="button" />
-				<?php if ($this->_tpl_vars['copyeditingUnavailable']): ?>
-					<br/>
-					<span class="instruct"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.submissionReview.cannotSendToCopyediting"), $this);?>
-</span>
 				<?php endif; ?>
-			</td>
-		</tr>
-	<?php endif; ?>
 
 	<?php if ($this->_tpl_vars['reviewFile']): ?>
 		<tr valign="top">

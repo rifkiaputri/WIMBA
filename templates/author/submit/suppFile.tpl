@@ -10,11 +10,11 @@
  *}
 {assign var="pageTitle" value="author.submit.step4a"}
 {include file="author/submit/submitHeader.tpl"}
-
 <p><a href="{url op="submit" path=4 articleId=$articleId}">&lt;&lt; {translate key="author.submit.backToSupplementaryFiles"}</a></p>
 
 <form id="submit" method="post" action="{url op="saveSubmitSuppFile" path=$suppFileId}" enctype="multipart/form-data">
 <input type="hidden" name="articleId" value="{$articleId|escape}" />
+<input type="hidden" id="addOneMore" name="addOneMore" value="false" />
 {include file="common/formErrors.tpl"}
 
 {if count($formLocales) > 1}
@@ -161,7 +161,7 @@
 </div>
 <div class="separator"></div>
 
-<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="submit" path="4" articleId=$articleId escape=false}'" /></p>
+<p><input type="submit" value="{translate key="common.saveAndContinue"}" class="button defaultButton" /><input type="submit" value="Add One More" class="button defaultButton" name="addOne"/> <input type="button" value="{translate key="common.cancel"}" class="button" onclick="document.location.href='{url op="submit" path="4" articleId=$articleId escape=false}'" /></p>
 
 <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 

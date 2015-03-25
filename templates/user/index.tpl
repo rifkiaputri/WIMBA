@@ -12,13 +12,13 @@
 {assign var="pageTitle" value="user.userHome"}
 {include file="common/header.tpl"}
 {/strip}
-
+{*
 {if $isSiteAdmin}
 	{assign var="hasRole" value=1}
 	&#187; <a href="{url journal="index" page=$isSiteAdmin->getRolePath()}">{translate key=$isSiteAdmin->getRoleName()}</a>
 	{call_hook name="Templates::User::Index::Site"}
 {/if}
-
+*}
 <div id="myJournals">
 {if !$currentJournal}<h3>{translate key="user.myJournals"}</h3>{/if}
 
@@ -32,11 +32,12 @@
 	<table width="100%" class="info">
 		{if $isValid.JournalManager.$journalId}
 			<tr>
-				<td>&#187; <a href="{url journal=$journalPath page="manager"}">{translate key="user.role.manager"}</a></td>
+                                {assign var="pathJournalManager" value="setup/3"}
+				<td>&#187; <a href="{url journal=$journalPath page="manager" op="setup" path="3"}">{translate key="user.role.manager"}</a></td>
 				<td></td>
 				<td></td>
 				<td></td>
-				<td align="right">{if $setupIncomplete.$journalId}[<a href="{url journal=$journalPath page="manager" op="setup" path="1"}">{translate key="manager.setup"}</a>]{/if}</td>
+				{*<td align="right">{if $setupIncomplete.$journalId}[<a href="{url journal=$journalPath page="manager" op="setup" path="1"}">{translate key="manager.setup"}</a>]{/if}</td>*}
 			</tr>
 		{/if}
 		{if $isValid.SubscriptionManager.$journalId}

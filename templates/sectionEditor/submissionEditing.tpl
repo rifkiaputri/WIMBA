@@ -18,15 +18,15 @@
 	<li><a href="{url op="submission" path=$submission->getId()}">{translate key="submission.summary"}</a></li>
 	{if $canReview}<li><a href="{url op="submissionReview" path=$submission->getId()}">{translate key="submission.review"}</a></li>{/if}
 	<li class="current"><a href="{url op="submissionEditing" path=$submission->getId()}">{translate key="submission.editing"}</a></li>
-	<li><a href="{url op="submissionHistory" path=$submission->getId()}">{translate key="submission.history"}</a></li>
-	<li><a href="{url op="submissionCitations" path=$submission->getId()}">{translate key="submission.citations"}</a></li>
+	{*<li><a href="{url op="submissionHistory" path=$submission->getId()}">{translate key="submission.history"}</a></li>
+	<li><a href="{url op="submissionCitations" path=$submission->getId()}">{translate key="submission.citations"}</a></li>*}
 </ul>
 
 {include file="sectionEditor/submission/summary.tpl"}
 
-<div class="separator"></div>
+{*<div class="separator"></div>
 
-{include file="sectionEditor/submission/copyedit.tpl"}
+{include file="sectionEditor/submission/copyedit.tpl"}*}
 
 <div class="separator"></div>
 
@@ -36,9 +36,9 @@
 
 {include file="sectionEditor/submission/layout.tpl"}
 
-<div class="separator"></div>
+{*<div class="separator"></div>*}
 
-{include file="sectionEditor/submission/proofread.tpl"}
+{*{include file="sectionEditor/submission/proofread.tpl"}*}
 
 {include file="common/footer.tpl"}
 

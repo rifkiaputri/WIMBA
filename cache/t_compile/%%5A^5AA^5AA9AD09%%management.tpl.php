@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-16 03:47:52
+<?php /* Smarty version 2.6.26, created on 2015-03-23 11:50:03
          compiled from sectionEditor/submission/management.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'sectionEditor/submission/management.tpl', 12, false),array('function', 'url', 'sectionEditor/submission/management.tpl', 21, false),array('function', 'icon', 'sectionEditor/submission/management.tpl', 22, false),array('function', 'html_options', 'sectionEditor/submission/management.tpl', 85, false),array('modifier', 'assign', 'sectionEditor/submission/management.tpl', 21, false),array('modifier', 'escape', 'sectionEditor/submission/management.tpl', 22, false),array('modifier', 'strip_unsafe_html', 'sectionEditor/submission/management.tpl', 27, false),array('modifier', 'to_array', 'sectionEditor/submission/management.tpl', 33, false),array('modifier', 'date_format', 'sectionEditor/submission/management.tpl', 33, false),array('modifier', 'truncate', 'sectionEditor/submission/management.tpl', 47, false),array('modifier', 'concat', 'sectionEditor/submission/management.tpl', 73, false),array('modifier', 'strip_tags', 'sectionEditor/submission/management.tpl', 74, false),array('modifier', 'nl2br', 'sectionEditor/submission/management.tpl', 90, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'sectionEditor/submission/management.tpl', 12, false),array('function', 'url', 'sectionEditor/submission/management.tpl', 21, false),array('function', 'icon', 'sectionEditor/submission/management.tpl', 22, false),array('modifier', 'assign', 'sectionEditor/submission/management.tpl', 21, false),array('modifier', 'escape', 'sectionEditor/submission/management.tpl', 22, false),array('modifier', 'strip_unsafe_html', 'sectionEditor/submission/management.tpl', 27, false),array('modifier', 'to_array', 'sectionEditor/submission/management.tpl', 33, false),array('modifier', 'date_format', 'sectionEditor/submission/management.tpl', 33, false),array('modifier', 'truncate', 'sectionEditor/submission/management.tpl', 47, false),array('modifier', 'concat', 'sectionEditor/submission/management.tpl', 74, false),array('modifier', 'strip_tags', 'sectionEditor/submission/management.tpl', 75, false),array('modifier', 'nl2br', 'sectionEditor/submission/management.tpl', 91, false),)), $this); ?>
 <div id="submission">
 <h3><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "article.submission"), $this);?>
 </h3>
@@ -69,28 +69,8 @@ if ($this->_foreach['suppFiles']['total'] > 0):
 					<?php echo ((is_array($_tmp=$this->_tpl_vars['suppFile']->getDateSubmitted())) ? $this->_run_mod_handler('date_format', true, $_tmp, $this->_tpl_vars['dateFormatShort']) : smarty_modifier_date_format($_tmp, $this->_tpl_vars['dateFormatShort'])); ?>
 &nbsp;&nbsp;
 				<?php endif; ?>
-				<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'editSuppFile','from' => 'submission','path' => ((is_array($_tmp=$this->_tpl_vars['submission']->getId())) ? $this->_run_mod_handler('to_array', true, $_tmp, $this->_tpl_vars['suppFile']->getId()) : $this->_plugins['modifier']['to_array'][0][0]->smartyToArray($_tmp, $this->_tpl_vars['suppFile']->getId()))), $this);?>
-" class="action"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "common.edit"), $this);?>
-</a>
-				&nbsp;|&nbsp;
-				<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'deleteSuppFile','from' => 'submission','path' => ((is_array($_tmp=$this->_tpl_vars['submission']->getId())) ? $this->_run_mod_handler('to_array', true, $_tmp, $this->_tpl_vars['suppFile']->getId()) : $this->_plugins['modifier']['to_array'][0][0]->smartyToArray($_tmp, $this->_tpl_vars['suppFile']->getId()))), $this);?>
-" onclick="return confirm('<?php echo ((is_array($_tmp=$this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "author.submit.confirmDeleteSuppFile"), $this))) ? $this->_run_mod_handler('escape', true, $_tmp, 'jsparam') : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp, 'jsparam'));?>
-')" class="action"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "common.delete"), $this);?>
-</a>
-				<?php if (! $this->_tpl_vars['notFirst']): ?>
-					&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'addSuppFile','from' => 'submission','path' => $this->_tpl_vars['submission']->getId()), $this);?>
-" class="action"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "submission.addSuppFile"), $this);?>
-</a>
-				<?php endif; ?>
-				<br />
-				<?php $this->assign('notFirst', 1); ?>
-			<?php endforeach; else: ?>
-				<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "common.none"), $this);?>
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'addSuppFile','from' => 'submission','path' => $this->_tpl_vars['submission']->getId()), $this);?>
-" class="action"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "submission.addSuppFile"), $this);?>
-</a>
-			<?php endif; unset($_from); ?>
+							<?php endforeach; else: ?>
+                                			<?php endif; unset($_from); ?>
 		</td>
 	</tr>
 	<tr>
@@ -113,16 +93,7 @@ if ($this->_foreach['suppFiles']['total'] > 0):
 </td>
 	</tr>
 	<tr>
-		<td class="label"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "section.section"), $this);?>
-</td>
-		<td class="value"><?php echo ((is_array($_tmp=$this->_tpl_vars['submission']->getSectionTitle())) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
-</td>
-		<td class="value"><form action="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'updateSection','path' => $this->_tpl_vars['submission']->getId()), $this);?>
-" method="post"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "submission.changeSection"), $this);?>
- <select name="section" size="1" class="selectMenu"><?php echo smarty_function_html_options(array('options' => $this->_tpl_vars['sections'],'selected' => $this->_tpl_vars['submission']->getSectionId()), $this);?>
-</select> <input type="submit" value="<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "common.record"), $this);?>
-" class="button" /></form></td>
-	</tr>
+			</tr>
 	<?php if ($this->_tpl_vars['submission']->getCommentsToEditor()): ?>
 	<tr valign="top">
 		<td width="20%" class="label"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "article.commentsToEditor"), $this);?>

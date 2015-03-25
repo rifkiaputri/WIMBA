@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-16 03:55:33
+<?php /* Smarty version 2.6.26, created on 2015-03-24 01:04:21
          compiled from sectionEditor/submission/peerReview.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'sectionEditor/submission/peerReview.tpl', 12, false),array('function', 'url', 'sectionEditor/submission/peerReview.tpl', 18, false),array('function', 'icon', 'sectionEditor/submission/peerReview.tpl', 19, false),array('function', 'get_help_id', 'sectionEditor/submission/peerReview.tpl', 56, false),array('function', 'html_options_translate', 'sectionEditor/submission/peerReview.tpl', 308, false),array('modifier', 'assign', 'sectionEditor/submission/peerReview.tpl', 18, false),array('modifier', 'escape', 'sectionEditor/submission/peerReview.tpl', 19, false),array('modifier', 'strip_unsafe_html', 'sectionEditor/submission/peerReview.tpl', 24, false),array('modifier', 'concat', 'sectionEditor/submission/peerReview.tpl', 35, false),array('modifier', 'to_array', 'sectionEditor/submission/peerReview.tpl', 36, false),array('modifier', 'strip_tags', 'sectionEditor/submission/peerReview.tpl', 36, false),array('modifier', 'date_format', 'sectionEditor/submission/peerReview.tpl', 56, false),array('modifier', 'count', 'sectionEditor/submission/peerReview.tpl', 76, false),array('modifier', 'truncate', 'sectionEditor/submission/peerReview.tpl', 86, false),array('modifier', 'ord', 'sectionEditor/submission/peerReview.tpl', 117, false),array('modifier', 'chr', 'sectionEditor/submission/peerReview.tpl', 127, false),array('modifier', 'default', 'sectionEditor/submission/peerReview.tpl', 180, false),array('modifier', 'nl2br', 'sectionEditor/submission/peerReview.tpl', 227, false),)), $this); ?>
@@ -391,35 +391,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'translate',
 
 	<?php if (( ( $this->_tpl_vars['reviewAssignment']->getRecommendation() === null || $this->_tpl_vars['reviewAssignment']->getRecommendation() === '' ) || ! $this->_tpl_vars['reviewAssignment']->getDateConfirmed() ) && $this->_tpl_vars['reviewAssignment']->getDateNotified() && ! $this->_tpl_vars['reviewAssignment']->getDeclined()): ?>
 		<tr valign="top">
-			<td class="label"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "reviewer.article.editorToEnter"), $this);?>
-</td>
-			<td>
-				<?php if (! $this->_tpl_vars['reviewAssignment']->getDateConfirmed()): ?>
-					<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'confirmReviewForReviewer','path' => ((is_array($_tmp=$this->_tpl_vars['submission']->getId())) ? $this->_run_mod_handler('to_array', true, $_tmp, $this->_tpl_vars['reviewAssignment']->getId()) : $this->_plugins['modifier']['to_array'][0][0]->smartyToArray($_tmp, $this->_tpl_vars['reviewAssignment']->getId())),'accept' => 1), $this);?>
-" class="action"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "reviewer.article.canDoReview"), $this);?>
-</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'confirmReviewForReviewer','path' => ((is_array($_tmp=$this->_tpl_vars['submission']->getId())) ? $this->_run_mod_handler('to_array', true, $_tmp, $this->_tpl_vars['reviewAssignment']->getId()) : $this->_plugins['modifier']['to_array'][0][0]->smartyToArray($_tmp, $this->_tpl_vars['reviewAssignment']->getId())),'accept' => 0), $this);?>
-" class="action"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "reviewer.article.cannotDoReview"), $this);?>
-</a><br />
-				<?php endif; ?>
-				<form method="post" action="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'uploadReviewForReviewer'), $this);?>
-" enctype="multipart/form-data">
-					<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.article.uploadReviewForReviewer"), $this);?>
-
-					<input type="hidden" name="articleId" value="<?php echo $this->_tpl_vars['submission']->getId(); ?>
-" />
-					<input type="hidden" name="reviewId" value="<?php echo $this->_tpl_vars['reviewAssignment']->getId(); ?>
-"/>
-					<input type="file" name="upload" class="uploadField" />
-					<input type="submit" name="submit" value="<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "common.upload"), $this);?>
-" class="button" />
-				</form>
-				<?php if ($this->_tpl_vars['reviewAssignment']->getDateConfirmed() && ! $this->_tpl_vars['reviewAssignment']->getDeclined()): ?>
-					<a class="action" href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'enterReviewerRecommendation','articleId' => $this->_tpl_vars['submission']->getId(),'reviewId' => $this->_tpl_vars['reviewAssignment']->getId()), $this);?>
-"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "editor.article.recommendation"), $this);?>
-</a>
-				<?php endif; ?>
-			</td>
-		</tr>
+					</tr>
 	<?php endif; ?>
 
 	<?php if ($this->_tpl_vars['reviewAssignment']->getDateNotified() && ! $this->_tpl_vars['reviewAssignment']->getDeclined() && $this->_tpl_vars['rateReviewerOnQuality']): ?>

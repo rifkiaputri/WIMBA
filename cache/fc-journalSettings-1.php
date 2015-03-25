@@ -156,6 +156,22 @@ Please follow the following protocol for making electronic revisions to your man
   array (
     'en_US' => 'Fast-Track Review',
   ),
+  'homeHeaderTitleImage' => 
+  array (
+    'en_US' => 
+    array (
+      'name' => 'logo wimba.jpg',
+      'uploadName' => 'homeHeaderTitleImage_en_US.jpg',
+      'width' => 300,
+      'height' => 80,
+      'mimeType' => 'image/jpeg',
+      'dateUploaded' => '2015-03-24 06:02:12',
+    ),
+  ),
+  'homeHeaderTitleType' => 
+  array (
+    'en_US' => '1',
+  ),
   'initials' => 
   array (
     'en_US' => 'WIMBA',
@@ -280,7 +296,7 @@ Please follow the following protocol for making electronic revisions to your man
       1 => 
       array (
         'order' => '2',
-        'content' => 'The submission file is in OpenOffice, Microsoft Word, RTF, or WordPerfect document file format.',
+        'content' => 'The submission file is in .PDF format.',
       ),
       2 => 
       array (

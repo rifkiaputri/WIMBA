@@ -35,7 +35,7 @@
 		<td width="16%" class="heading">{translate key="submission.complete"}</td>
 		<td width="22%" colspan="2" class="heading">{translate key="submission.acknowledge"}</td>
 	</tr>
-	<tr>
+	{*<tr>
 		<td colspan="2">
 			{translate key="submission.layout.layoutVersion"}
 		</td>
@@ -98,7 +98,7 @@
 	<tr>
 		<td colspan="7" class="separator">&nbsp;</td>
 	</tr>
-
+        *}
 	<tr>
 		<td colspan="2">{translate key="submission.layout.galleyFormat"}</td>
 		<td colspan="2" class="heading">{translate key="common.file"}</td>
@@ -122,6 +122,7 @@
 		<td colspan="7" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	{/foreach}
+        {*
 	<tr>
 		<td colspan="7" class="separator">&nbsp;</td>
 	</tr>
@@ -146,6 +147,7 @@
 		<td colspan="7" class="nodata">{translate key="common.none"}</td>
 	</tr>
 	{/foreach}
+        *}
 	<tr>
 		<td colspan="7" class="separator">&nbsp;</td>
 	</tr>
@@ -154,15 +156,15 @@
 <form method="post" action="{url op="uploadLayoutFile"}"  enctype="multipart/form-data">
 	<input type="hidden" name="from" value="submissionEditing" />
 	<input type="hidden" name="articleId" value="{$submission->getId()}" />
-	{translate key="submission.uploadFileTo"} <input type="radio" name="layoutFileType" id="layoutFileTypeSubmission" value="submission" checked="checked" /><label for="layoutFileTypeSubmission">{translate key="submission.layout.layoutVersion"}</label>, <input type="radio" name="layoutFileType" id="layoutFileTypeGalley" value="galley" /><label for="layoutFileTypeGalley">{translate key="submission.galley"}</label>, <input type="radio" name="layoutFileType" id="layoutFileTypeSupp" value="supp" /><label for="layoutFileTypeSupp">{translate key="article.suppFilesAbbrev"}</label>
+	{translate key="submission.uploadFileTo"} {*<input type="radio" name="layoutFileType" id="layoutFileTypeSubmission" value="submission" /><label for="layoutFileTypeSubmission">{translate key="submission.layout.layoutVersion"}</label>, *}<input type="radio" name="layoutFileType" id="layoutFileTypeGalley" value="galley" checked="checked"/><label for="layoutFileTypeGalley">{translate key="submission.galley"}</label>{*, <input type="radio" name="layoutFileType" id="layoutFileTypeSupp" value="supp" /><label for="layoutFileTypeSupp">{translate key="article.suppFilesAbbrev"}</label>*}
 	<input type="file" name="layoutFile" size="10" class="uploadField" />
 	<input type="submit" value="{translate key="common.upload"}" class="button" />
 	<br />
-	{translate key="submission.createRemote"} <input type="radio" name="layoutFileType" id="layoutFileTypeGalley" value="galley" /><label for="layoutFileTypeGalley">{translate key="submission.galley"}</label>, <input type="radio" name="layoutFileType" id="layoutFileTypeSupp" value="supp" /><label for="layoutFileTypeSupp">{translate key="article.suppFilesAbbrev"}</label>
-	<input type="submit" name="createRemote" value="{translate key="common.create"}" class="button" />
+	{*{translate key="submission.createRemote"} <input type="radio" name="layoutFileType" id="layoutFileTypeGalley" value="galley" /><label for="layoutFileTypeGalley">{translate key="submission.galley"}</label>, <input type="radio" name="layoutFileType" id="layoutFileTypeSupp" value="supp" /><label for="layoutFileTypeSupp">{translate key="article.suppFilesAbbrev"}</label>
+	<input type="submit" name="createRemote" value="{translate key="common.create"}" class="button" />*}
 </form>
 
-<div id="layoutComments">
+{*<div id="layoutComments">
 {translate key="submission.layout.layoutComments"}
 {if $submission->getMostRecentLayoutComment()}
 	{assign var="comment" value=$submission->getMostRecentLayoutComment()}
@@ -170,7 +172,7 @@
 {else}
 	<a href="javascript:openComments('{url op="viewLayoutComments" path=$submission->getId()}');" class="icon">{icon name="comment"}</a> {translate key="common.noComments"}
 {/if}
-
+*}
 {if $currentJournal->getLocalizedSetting('layoutInstructions')}
 &nbsp;&nbsp;
 <a href="javascript:openHelp('{url op="instructions" path="layout"}')" class="action">{translate key="submission.layout.instructions"}</a>

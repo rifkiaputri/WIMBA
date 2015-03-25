@@ -42,14 +42,30 @@ class SubmitHandler extends AuthorHandler {
 		$this->setupTemplate($request, true);
 
 		$formClass = "AuthorSubmitStep{$step}Form";
+                $formClass2 = "AuthorSubmitStep2Form";
 		import("classes.author.form.submit.$formClass");
-
+                import("classes.author.form.submit.$formClass2");
 		$submitForm = new $formClass($article, $journal, $request);
+                $submitForm2 = new $formClass2($article, $journal, $request);
 		if ($submitForm->isLocaleResubmit()) {
 			$submitForm->readInputData();
 		} else {
 			$submitForm->initData();
 		}
+                if ($submitForm2->isLocaleResubmit()) {
+			$submitForm2->readInputData();
+		} else {
+			$submitForm2->initData();
+		}
+                if($step!=1){
+                $templateMgr =& TemplateManager::getManager();
+
+		// Get supplementary files for this article
+		$articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		if ($this->article->getSubmissionFileId() != null) {
+			$templateMgr->assign_by_ref('submissionFile', $articleFileDao->getArticleFile($this->article->getSubmissionFileId()));
+		}
+                }
 		$submitForm->display();
 	}
 
@@ -68,11 +84,22 @@ class SubmitHandler extends AuthorHandler {
 		$article =& $this->article;
 
 		$formClass = "AuthorSubmitStep{$step}Form";
+                $formClass2 = "AuthorSubmitStep2Form";
 		import("classes.author.form.submit.$formClass");
-
+                import("classes.author.form.submit.$formClass2");
 		$submitForm = new $formClass($article, $journal, $request);
+                $submitForm2 = new $formClass2($article, $journal, $request);
 		$submitForm->readInputData();
+                $submitForm2 ->readInputData();
+                $templateMgr =& TemplateManager::getManager();
 
+		// Get supplementary files for this article
+		if($step!=1){
+                $articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+		if ($this->article->getSubmissionFileId() != null) {
+			$templateMgr->assign_by_ref('submissionFile', $articleFileDao->getArticleFile($this->article->getSubmissionFileId()));
+		}
+                }
 		if (!HookRegistry::call('SubmitHandler::saveSubmit', array($step, &$article, &$submitForm))) {
 
 			// Check for any special cases before trying to save
@@ -85,6 +112,11 @@ class SubmitHandler extends AuthorHandler {
 					break;
 
 				case 3:
+                                        if ($request->getUserVar('uploadSubmissionFile')) {
+                                            echo $_FILES['submissionFile']['tmp_name'];    
+                                            $submitForm2->uploadSubmissionFile('submissionFile');
+						$editData = true;
+					}
 					if ($request->getUserVar('addAuthor')) {
 						// Add a sponsor
 						$editData = true;
@@ -150,10 +182,18 @@ class SubmitHandler extends AuthorHandler {
 					}
 					break;
 			}
-
 			if (!isset($editData) && $submitForm->validate()) {
 				$articleId = $submitForm->execute();
+                                if($step==3){
+                                    $articleId = $submitForm2->execute();
+                                }
 				HookRegistry::call('Author::SubmitHandler::saveSubmit', array(&$step, &$article, &$submitForm));
+                                if($step==3){
+                                    $step = 2;
+                                    HookRegistry::call('Author::SubmitHandler::saveSubmit', array(&$step, &$article, &$submitForm2));
+                                    $step = 3;
+                                }
+                                
 
 				if ($step == 5) {
 					// Send a notification to associated users
@@ -185,9 +225,21 @@ class SubmitHandler extends AuthorHandler {
 					$templateMgr->display('author/submit/complete.tpl');
 
 				} else {
-					$request->redirect(null, null, 'submit', $step+1, array('articleId' => $articleId));
-				}
+                                    if($step==1){
+                                        $request->redirect(null, null, 'submit', $step+2, array('articleId' => $articleId));
+                                    }
+                                    else{
+                                        $request->redirect(null, null, 'submit', $step+1, array('articleId' => $articleId));
+                                    }
+                                }
 			} else {
+                                $templateMgr =& TemplateManager::getManager();
+
+                                // Get supplementary files for this article
+                                $articleFileDao =& DAORegistry::getDAO('ArticleFileDAO');
+                                if ($this->article->getSubmissionFileId() != null) {
+                                        $templateMgr->assign_by_ref('submissionFile', $articleFileDao->getArticleFile($this->article->getSubmissionFileId()));
+                                }
 				$submitForm->display();
 			}
 		}
@@ -202,7 +254,7 @@ class SubmitHandler extends AuthorHandler {
 		$articleId = (int) $request->getUserVar('articleId');
 		$journal =& $request->getJournal();
 
-		$this->validate($request, $articleId, 4);
+		$this->validate($request, $articleId, 3);
 		$article =& $this->article;
 		$this->setupTemplate($request, true);
 
@@ -259,7 +311,12 @@ class SubmitHandler extends AuthorHandler {
 
 		if ($submitForm->validate()) {
 			$submitForm->execute();
-			$request->redirect(null, null, 'submit', '4', array('articleId' => $articleId));
+                        if(isset($_POST['addOne'])){
+                            $request->redirect(null, null, 'submit', '4', array('articleId' => $articleId));
+                        }
+                        else{
+                            $request->redirect(null, null, 'submit', '4', array('articleId' => $articleId));
+                        }
 		} else {
 			$submitForm->display();
 		}
@@ -335,7 +392,7 @@ class SubmitHandler extends AuthorHandler {
 		// Check that article exists for this journal and user and that submission is incomplete
 		if ($articleId) {
 			$article =& $articleDao->getArticle((int) $articleId);
-			if (!$article || $article->getUserId() !== $user->getId() || $article->getJournalId() !== $journal->getId() || ($step !== false && $step > $article->getSubmissionProgress())) {
+			if (!$article || $article->getUserId() !== $user->getId() || $article->getJournalId() !== $journal->getId() || ($step !== false && $step > $article->getSubmissionProgress() && step>=3)) {
 				$request->redirect(null, null, 'submit');
 			}
 		}

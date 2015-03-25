@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-16 03:47:51
+<?php /* Smarty version 2.6.26, created on 2015-03-24 00:57:47
          compiled from sectionEditor/submission.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'sectionEditor/submission.tpl', 12, false),array('function', 'url', 'sectionEditor/submission.tpl', 18, false),array('modifier', 'assign', 'sectionEditor/submission.tpl', 12, false),)), $this); ?>
@@ -19,13 +19,7 @@ unset($_smarty_tpl_vars);
 	<?php if ($this->_tpl_vars['canEdit']): ?><li><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'submissionEditing','path' => $this->_tpl_vars['submission']->getId()), $this);?>
 "><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "submission.editing"), $this);?>
 </a></li><?php endif; ?>
-	<li><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'submissionHistory','path' => $this->_tpl_vars['submission']->getId()), $this);?>
-"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "submission.history"), $this);?>
-</a></li>
-	<li><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'submissionCitations','path' => $this->_tpl_vars['submission']->getId()), $this);?>
-"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "submission.citations"), $this);?>
-</a></li>
-</ul>
+	</ul>
 
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "sectionEditor/submission/management.tpl", 'smarty_include_vars' => array()));

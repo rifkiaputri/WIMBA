@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 
 #header {
-    background-color: #990000;
+    background-color: #900000;
     color: #FFF;
 }
 
@@ -20,7 +20,7 @@ and open the template in the editor.
 
 #navbar a {
     color: #FFF;
-    font-size: 11px;
+    font-size: 13px;
     padding-bottom: 20px;
 }
 

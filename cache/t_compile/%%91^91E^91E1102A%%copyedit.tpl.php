@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-05 12:40:53
+<?php /* Smarty version 2.6.26, created on 2015-03-23 12:24:43
          compiled from author/submission/copyedit.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'author/submission/copyedit.tpl', 12, false),array('function', 'url', 'author/submission/copyedit.tpl', 15, false),array('function', 'icon', 'author/submission/copyedit.tpl', 64, false),array('modifier', 'escape', 'author/submission/copyedit.tpl', 22, false),array('modifier', 'date_format', 'author/submission/copyedit.tpl', 38, false),array('modifier', 'default', 'author/submission/copyedit.tpl', 38, false),array('modifier', 'to_array', 'author/submission/copyedit.tpl', 47, false),array('modifier', 'assign', 'author/submission/copyedit.tpl', 66, false),)), $this); ?>
@@ -168,4 +168,4 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'translate',
 </a><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "common.noComments"), $this);?>
 
 <?php endif; ?>
-</div>
+</div>

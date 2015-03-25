@@ -31,8 +31,8 @@ $(document).ready(function() {
 {if !$isLayoutEditor}{* Layout Editors can also access this page. *}
 	<ul class="menu">
 		<li><a href="{url op="createIssue"}">{translate key="editor.navigation.createIssue"}</a></li>
-		<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
-		<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>
+		{*<li{if $unpublished} class="current"{/if}><a href="{url op="futureIssues"}">{translate key="editor.navigation.futureIssues"}</a></li>
+		<li{if !$unpublished} class="current"{/if}><a href="{url op="backIssues"}">{translate key="editor.navigation.issueArchive"}</a></li>*}
 	</ul>
 {/if}
 
@@ -48,7 +48,7 @@ $(document).ready(function() {
 <ul class="menu">
 	<li class="current"><a href="{url op="issueToc" path=$issueId}">{translate key="issue.toc"}</a></li>
 	<li><a href="{url op="issueData" path=$issueId}">{translate key="editor.issues.issueData"}</a></li>
-	<li><a href="{url op="issueGalleys" path=$issueId}">{translate key="editor.issues.galleys"}</a></li>
+	{*<li><a href="{url op="issueGalleys" path=$issueId}">{translate key="editor.issues.galleys"}</a></li>*}
 	{if $unpublished}<li><a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">{translate key="editor.issues.previewIssue"}</a></li>{/if}
 	{call_hook name="Templates::Editor::Issues::IssueToc::IssuePages"}
 </ul>
