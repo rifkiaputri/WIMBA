@@ -85,6 +85,10 @@
 	<!-- Common Form Messages -->
 
 	<!-- Common Email Messages -->
+	<message key="common.email.name">Name</message>
+	<message key="common.email.address">E-mail</message>
+	<message key="common.email.content">Content</message>
+	<message key="common.email.submit">Submit</message>
 
 	<!-- Common Localization Terms -->
 
