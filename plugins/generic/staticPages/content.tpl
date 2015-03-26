@@ -17,11 +17,11 @@
 	<table class="data" width="100%">
 		<tr>
 			<td width="20%" class="label">{fieldLabel name="name" key="common.email.name"}</td>
-			<td width="80%" class="value"><input type="text" name="name" size="30" maxlength="32" class="textField"></td>
+			<td width="80%" class="value"><input type="text" name="name" size="30" maxlength="32" class="textField" required></td>
 		</tr>
 		<tr>
 			<td width="20%" class="label">{fieldLabel name="email" key="common.email.address"}</td>
-			<td width="80%" class="value"><input type="text" name="email" size="30" maxlength="90" class="textField"></td>
+			<td width="80%" class="value"><input type="text" name="email" size="30" maxlength="90" class="textField" required></td>
 		</tr>
 		<tr>
 			<td width="20%" class="label">{fieldLabel name="message" key="common.email.content"}</td>

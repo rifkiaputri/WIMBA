@@ -118,6 +118,10 @@ class AboutHandler extends Handler {
 		$email = $request->getUserVar('email');
 		$message = $request->getUserVar('message');
 
+		if (empty($name) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($message)) {
+			$request->redirect(null, 'pages', 'view', 'contact');
+		}
+
 		$this->addCheck(new HandlerValidatorJournal($this));
 		$this->validate();
 
