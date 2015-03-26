@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-19 18:11:53
+<?php /* Smarty version 2.6.26, created on 2015-03-26 15:54:02
          compiled from core:common/header.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'core:common/header.tpl', 11, false),array('function', 'call_hook', 'core:common/header.tpl', 55, false),array('function', 'url', 'core:common/header.tpl', 104, false),array('modifier', 'assign', 'core:common/header.tpl', 11, false),array('modifier', 'escape', 'core:common/header.tpl', 22, false),array('modifier', 'replace', 'core:common/header.tpl', 127, false),)), $this); ?>
@@ -259,4 +259,3 @@ unset($_smarty_tpl_vars);
 </h3>
 <?php endif; ?>
 <div id="content">
-

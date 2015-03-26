@@ -113,6 +113,40 @@ class AboutHandler extends Handler {
 		$templateMgr->display('about/contact.tpl');
 	}
 
+	function sendInquiry($args, &$request) {
+		$name = $request->getUserVar('name');
+		$email = $request->getUserVar('email');
+		$message = $request->getUserVar('message');
+
+		$this->addCheck(new HandlerValidatorJournal($this));
+		$this->validate();
+
+		$this->setupTemplate(true);
+
+		$journalSettingsDao =& DAORegistry::getDAO('JournalSettingsDAO');
+		$journal =& Request::getJournal();
+
+		$templateMgr =& TemplateManager::getManager();
+		$journalSettings =& $journalSettingsDao->getJournalSettings($journal->getId());
+
+		$to = array(
+			'email' => $journalSettings['contactEmail'],
+			'name' => $journalSettings['contactName']
+		);
+		$subject = "Inquiry";
+
+		import('lib.pkp.classes.mail.Mail');
+		$mail = new Mail();
+		$mail->setRecipients(array($to));
+		$mail->setFrom($email, $name);
+		$mail->setSubject($subject);
+		$mail->setBody($message);
+		$mail->send();
+
+		$templateMgr->assign_by_ref('journalSettings', $journalSettings);
+		$templateMgr->display('about/contact.tpl');
+	}
+
 	/**
 	 * Display editorialTeam page.
 	 */

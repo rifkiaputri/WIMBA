@@ -176,6 +176,10 @@ Please follow the following protocol for making electronic revisions to your man
   array (
     'en_US' => 'WIMBA',
   ),
+  'journalPageFooter' => 
+  array (
+    'en_US' => '<p>Desain Komunikasi Visual</p><p>Fakultas Seni Rupa dan Desain</p><p>Institut Teknologi Bandung</p>',
+  ),
   'librarianInformation' => 
   array (
     'en_US' => 'We encourage research librarians to list this journal among their library\'s electronic journal holdings. As well, it may be worth noting that this journal\'s open source publishing system is suitable for libraries to host for their faculty members to use with journals they are involved in editing (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).',
