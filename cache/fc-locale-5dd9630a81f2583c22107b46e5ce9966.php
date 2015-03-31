@@ -293,7 +293,6 @@
   'manager.setup.gettingDownTheDetails' => 'Step 1. Getting Down the Details',
   'manager.setup.guidelines' => 'Guidelines',
   'manager.setup.guidingSubmissions' => 'Step 3. Guiding Submissions',
-  'manager.setup.journalSetup' => 'Journal Setup',
   'manager.setup.homepageImage' => 'Homepage image',
   'manager.setup.homepageImageDescription' => 'Add an image or graphic file to the middle of the page.',
   'manager.setup.information' => 'Information',

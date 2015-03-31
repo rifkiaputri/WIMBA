@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-16 03:11:23
+<?php /* Smarty version 2.6.26, created on 2015-03-26 15:56:20
          compiled from form/interestsInput.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'form/interestsInput.tpl', 18, false),array('function', 'url', 'form/interestsInput.tpl', 26, false),)), $this); ?>
@@ -52,4 +52,4 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'f
 	<!-- If Javascript is disabled, this field will be visible -->
 	<textarea name="interestsTextOnly" rows="5" cols="40" class="interestsTextOnly textArea"><?php if ($this->_tpl_vars['FBV_interestsTextOnly']): ?><?php echo ((is_array($_tmp=$this->_tpl_vars['FBV_interestsTextOnly'])) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
 <?php endif; ?></textarea>
-</div>
+</div>

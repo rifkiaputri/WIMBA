@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-16 03:11:22
+<?php /* Smarty version 2.6.26, created on 2015-03-26 15:56:20
          compiled from common/formErrors.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'common/formErrors.tpl', 13, false),array('modifier', 'escape', 'common/formErrors.tpl', 16, false),)), $this); ?>
@@ -25,4 +25,4 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'translate',
 		// -->
 	'; ?>
 </script>
-<?php endif; ?>
+<?php endif; ?>
