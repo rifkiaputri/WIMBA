@@ -3,35 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/plugins/blocks/developedBy/block.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/editor/submissionsUnassigned.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submission/summary.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/common/journalManagement.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/admin/index.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/cache/fc-locale-39ad57a0a799a092b476f7b3d029e60d.php</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/user/index.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/config.inc.php</file>
+            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/plugins/blocks/user/block.tpl</file>
             <file>file:/C:/xampp2/htdocs/ojs-2.4.5/styles/wimba.css</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submission/status.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submissionReview.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/common/siteAdministration.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submission.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submission/editorDecision.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/plugins/blocks/help/block.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submission/editors.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/cache/fc-locale-289f805dbcc50d60fd27f62325c88f5e.php</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submission/management.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/index.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submissionEditing.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/cache/fc-locale-ee2e16995d3d642d898806a469e591d0.php</file>
+            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/lib/pkp/templates/common/footer.tpl</file>
             <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/common/navbar.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submission/peerReview.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/cache/fc-locale-03b174b61510807426c2a2c128f6a86a.php</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submission/copyedit.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submission/proofread.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/sectionEditor/submission/layout.tpl</file>
             <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/editor/submissions.tpl</file>
-            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/templates/submission/metadata/metadata.tpl</file>
+            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/cache/fc-locale-03b174b61510807426c2a2c128f6a86a.php</file>
+            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/lib/pkp/styles/common.css</file>
+            <file>file:/C:/xampp2/htdocs/ojs-2.4.5/styles/common.css</file>
         </group>
     </open-files>
 </project-private>

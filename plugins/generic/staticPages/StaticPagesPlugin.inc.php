@@ -163,7 +163,7 @@ class StaticPagesPlugin extends GenericPlugin {
 							'pageTitle' => 'plugins.generic.staticPages.displayName',
 							'pageHierarchy' => $pageCrumbs,
 							'message' => 'plugins.generic.staticPages.pageSaved',
-							'backLink' => Request::url(null, null, null, array($this->getCategory(), $this->getName(), 'settings')),
+							'backLink' => Request::url(null, null, 'setup', '3', null, null, false),
 							'backLinkLabel' => 'common.continue'
 						));
 						$templateMgr->display('common/message.tpl');

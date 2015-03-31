@@ -43,9 +43,10 @@
 {/if}
 	{*<tr>
 		<td width="20%" class="label">{fieldLabel required="true" name="pagePath" key="plugins.generic.staticPages.path"}</td>
-		<td width="80%" class="value" ><input type="text" name="pagePath" value="{$pagePath|escape}" size="40" id="path" maxlength="50" class="textField" /></td>
+		<td width="80%" class="value" ></td>
 	</tr>*}
 	<tr>
+                <input type="hidden" name="pagePath" value="{$pagePath|escape}" size="40" id="path" maxlength="50" class="textField" />
 		<td width="20%" class="label">{fieldLabel required="true" name="title" key="plugins.generic.staticPages.pageTitle"}</td>
 		<td width="80%" class="value" ><input type="text" name="title[{$formLocale|escape}]" value="{$title[$formLocale]|escape}" size="40" id="title" maxlength="50" class="textField" /></td>
 	</tr>

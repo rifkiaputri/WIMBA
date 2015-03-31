@@ -13,6 +13,7 @@
 {/if}
 {if $pageFooter}
 	<br /><br />
+        <div class="separator"></div>
 	<div id="pageFooter">{$pageFooter}</div>
 {/if}
 {call_hook name="Templates::Common::Footer::PageFooter"}

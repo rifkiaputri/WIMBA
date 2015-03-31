@@ -94,9 +94,10 @@
 	</td>
 </tr>
 </table>
+
 {call_hook name="Templates::Issue::Issue::Article"}
 {/foreach}
-
+</div>
 {if !$smarty.foreach.sections.last}
 <div class="separator"></div>
 {/if}

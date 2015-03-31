@@ -18,29 +18,33 @@
 <div id="navbar">
 	<ul class="menu">
 		<li id="home"><a href="{url page="index"}">{translate key="navigation.home"}</a></li>
+                <li><a>|</a></li>
 		<li id="about"><a href="{url page="pages" op="view" path="about"}">{translate key="navigation.about"}</a></li>
-				<li id="article"><a>Article &#9662;</a>
-					<ul>
-                                            {iterate from=issues item=issue}
-						<li><a>{$issue->getYear()} &#9656;</a>
-							<ul>
-                                                            {assign var="year" value=$issue->getYear()}
-                                                            {php}
-                                                                $publishedIssuesByYear = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $this->get_template_vars('year'));
-                                                                while($issueYear = $publishedIssuesByYear->next()){
-                                                                //echo'a';    
-                                                                    echo '<li><a href="'.Request::url(null, "issue", "view", $issueYear->getBestIssueId($currentJournal), null, null, false).'">'.$issueYear->getIssueIdentification().'</a></li>'; 
-                                                                }
-                                                            {/php}
-							</ul>
-						</li>
-                                             {/iterate}
-					</ul>
-				</li>
+                <li><a>|</a></li>
+                <li id="article"><a>Article &#9662;</a>
+                        <ul>
+                            {iterate from=issues item=issue}
+                                <li><a>{$issue->getYear()} &#9656;</a>
+                                        <ul>
+                                            {assign var="year" value=$issue->getYear()}
+                                            {php}
+                                                $publishedIssuesByYear = $issueDao->getPublishedIssuesByNumber($journal->getId(), null, null, $this->get_template_vars('year'));
+                                                while($issueYear = $publishedIssuesByYear->next()){
+                                                //echo'a';    
+                                                    echo '<li><a href="'.Request::url(null, "issue", "view", $issueYear->getBestIssueId($currentJournal), null, null, false).'">'.$issueYear->getIssueIdentification().'</a></li>'; 
+                                                }
+                                            {/php}
+                                        </ul>
+                                </li>
+                             {/iterate}
+                        </ul>
+                </li>
+                <li><a>|</a></li>
                 <li id="guide"><a href="{url page="pages" op="view" path="guide"}">Submission Guide</a></li>
-                <li id="template"><a href="{url page="pages" op="view" path="templates"}">Templates</a></li>
+                <li><a>|</a></li>
                 <li id="contact"><a href="{url page="pages" op="view" path="contact"}">Contact</a></li>
-		{if $isUserLoggedIn}
+		<li><a>|</a></li>
+                {if $isUserLoggedIn}
 			<li id="userHome"><a href="{url journal="wimba" page="user"}">{translate key="navigation.userHome"}</a></li>
 		{else}
 			{if !$hideRegisterLink}

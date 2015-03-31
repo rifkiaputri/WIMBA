@@ -445,6 +445,16 @@ class IssueHandler extends Handler {
 				$templateMgr->assign('height', $issue->getHeight($locale));
 				$templateMgr->assign('coverPageAltText', $issue->getCoverPageAltText($locale));
 				$templateMgr->assign('originalFileName', $issue->getOriginalFileName($locale));
+                                $issueGalleyDao =& DAORegistry::getDAO('IssueGalleyDAO');
+				$issueGalleys =& $issueGalleyDao->getGalleysByIssue($issue->getId());
+				$templateMgr->assign_by_ref('issueGalleys', $issueGalleys);
+
+				// Published articles
+				$publishedArticleDao =& DAORegistry::getDAO('PublishedArticleDAO');
+				$publishedArticles =& $publishedArticleDao->getPublishedArticlesInSections($issue->getId(), true);
+
+				$publicFileManager = new PublicFileManager();
+				$templateMgr->assign_by_ref('publishedArticles', $publishedArticles);
 
 				$showToc = false;
 			} else {

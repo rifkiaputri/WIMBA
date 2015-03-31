@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-16 03:41:21
+<?php /* Smarty version 2.6.26, created on 2015-03-26 06:22:51
          compiled from file:C:%5Cxampp2%5Chtdocs%5Cojs-2.4.5/plugins/generic/staticPages/content.tpl */ ?>
 <?php $this->assign('pageTitleTranslated', $this->_tpl_vars['title']); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;

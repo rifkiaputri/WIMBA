@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-18 16:43:24
+<?php /* Smarty version 2.6.26, created on 2015-03-26 04:39:02
          compiled from issue/issue.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'issue/issue.tpl', 12, false),array('modifier', 'strip_unsafe_html', 'issue/issue.tpl', 53, false),array('modifier', 'to_array', 'issue/issue.tpl', 73, false),array('function', 'url', 'issue/issue.tpl', 41, false),array('function', 'translate', 'issue/issue.tpl', 42, false),array('function', 'call_hook', 'issue/issue.tpl', 48, false),)), $this); ?>
@@ -124,10 +124,11 @@ if ($this->_foreach['galleyList']['total'] > 0):
 	</td>
 </tr>
 </table>
+
 <?php echo $this->_plugins['function']['call_hook'][0][0]->smartyCallHook(array('name' => "Templates::Issue::Issue::Article"), $this);?>
 
 <?php endforeach; endif; unset($_from); ?>
-
+</div>
 <?php if (! ($this->_foreach['sections']['iteration'] == $this->_foreach['sections']['total'])): ?>
 <div class="separator"></div>
 <?php endif; ?>

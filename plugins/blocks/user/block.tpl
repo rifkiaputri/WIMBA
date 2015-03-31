@@ -44,7 +44,8 @@
 						<td colspan="2"><input type="checkbox" id="remember" name="remember" value="1" /> <label for="remember">{translate key="plugins.block.user.rememberMe"}</label></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="submit" value="{translate key="user.login"}" class="button" /></td>
+						<td colspan="2"><p><input type="submit" value="{translate key="user.login"}" class="button" /><input type="submit" value="{translate key="user.register"}" class="button" /></p></td>
+                                                
 					</tr>
 				</table>
 			</form>

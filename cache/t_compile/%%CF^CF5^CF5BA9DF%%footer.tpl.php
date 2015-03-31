@@ -1,13 +1,14 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-15 01:58:42
+<?php /* Smarty version 2.6.26, created on 2015-03-25 11:37:57
          compiled from core:common/footer.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'core:common/footer.tpl', 12, false),array('function', 'call_hook', 'core:common/footer.tpl', 18, false),array('function', 'get_debug_info', 'core:common/footer.tpl', 23, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'core:common/footer.tpl', 12, false),array('function', 'call_hook', 'core:common/footer.tpl', 19, false),array('function', 'get_debug_info', 'core:common/footer.tpl', 24, false),)), $this); ?>
 <?php if ($this->_tpl_vars['displayCreativeCommons']): ?>
 	<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "common.ccLicense"), $this);?>
 
 <?php endif; ?>
 <?php if ($this->_tpl_vars['pageFooter']): ?>
 	<br /><br />
+        <div class="separator"></div>
 	<div id="pageFooter"><?php echo $this->_tpl_vars['pageFooter']; ?>
 </div>
 <?php endif; ?>

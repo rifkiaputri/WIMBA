@@ -16,10 +16,10 @@
   'copySubmissionAckAddress' => '',
   'copySubmissionAckPrimaryContact' => false,
   'copySubmissionAckSpecified' => false,
-  'displayCurrentIssue' => false,
+  'displayCurrentIssue' => true,
   'emailSignature' => '________________________________________________________________________
-Test Journal
-http://localhost/ojs-2.4.5/index.php/test',
+WIMBA
+http://localhost/ojs-2.4.5/index.php/wimba',
   'envelopeSender' => '',
   'fastTrackFee' => 0,
   'includeCopyrightStatement' => false,
@@ -136,10 +136,6 @@ Please follow the following protocol for making electronic revisions to your man
 <li><strong>Final copyedit.</strong> The journal copy editor will verify changes made by the author and incorporate the responses to the author queries to create a final manuscript. When finished, the copy editor will upload the final document through the journal Web site and alert the layout editor to complete formatting.</li>
 </ol>',
   ),
-  'description' => 
-  array (
-    'en_US' => 'lalalalallala',
-  ),
   'donationFeeDescription' => 
   array (
     'en_US' => 'Donations of any amount to this journal are gratefully received and provide a means for the editors to continue to provide a journal of the highest quality to its readers.',
@@ -176,6 +172,10 @@ Please follow the following protocol for making electronic revisions to your man
   array (
     'en_US' => 'WIMBA',
   ),
+  'journalPageFooter' => 
+  array (
+    'en_US' => '<p>Desain Komunikasi Visual</p><p>Fakultas Seni Rupa dan Desain</p><p>Institut Teknologi Bandung</p>',
+  ),
   'librarianInformation' => 
   array (
     'en_US' => 'We encourage research librarians to list this journal among their library\'s electronic journal holdings. As well, it may be worth noting that this journal\'s open source publishing system is suitable for libraries to host for their faculty members to use with journals they are involved in editing (see <a href="http://pkp.sfu.ca/ojs">Open Journal Systems</a>).',
@@ -206,6 +206,22 @@ Please follow the following protocol for making electronic revisions to your man
   'openAccessPolicy' => 
   array (
     'en_US' => 'This journal provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.',
+  ),
+  'pageHeaderTitleImage' => 
+  array (
+    'en_US' => 
+    array (
+      'name' => 'logo wimba.jpg',
+      'uploadName' => 'pageHeaderTitleImage_en_US.jpg',
+      'width' => 300,
+      'height' => 80,
+      'mimeType' => 'image/jpeg',
+      'dateUploaded' => '2015-03-26 19:19:16',
+    ),
+  ),
+  'pageHeaderTitleType' => 
+  array (
+    'en_US' => '1',
   ),
   'privacyStatement' => 
   array (

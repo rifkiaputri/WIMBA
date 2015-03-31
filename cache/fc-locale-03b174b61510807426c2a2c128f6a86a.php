@@ -311,7 +311,7 @@
   'navigation.stepNumber' => 'Step {$step}',
   'navigation.submissions' => 'Submissions',
   'navigation.system' => 'System',
-  'navigation.userHome' => 'User Home',
+  'navigation.userHome' => 'User Page',
   'navigation.user' => 'User',
   'navigation.userManagement' => 'User Management',
   'notification.allow' => 'Allow these types of notifications to appear in my notification feed.',
