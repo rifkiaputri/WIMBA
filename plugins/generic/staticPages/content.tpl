@@ -12,7 +12,7 @@
 {include file="common/header.tpl"}
 
 {$content}
-
+{if $path eq "contact"}
 <form id="inquiry" method="post" action="{url page="about" op="sendInquiry"}">
 	<table class="data" width="100%">
 		<tr>
@@ -35,5 +35,5 @@
 		</tr>
 	</table>
 </form>
-
+{/if}
 {include file="common/footer.tpl"}

@@ -39,6 +39,7 @@ class StaticPagesHandler extends Handler {
 			}
 
 			// and assign the template vars needed
+                        $templateMgr->assign('path', $path);
 			$templateMgr->assign('title', $staticPage->getStaticPageTitle());
 			$templateMgr->assign('content',  $staticPage->getStaticPageContent());
 			$templateMgr->display($staticPagesPlugin->getTemplatePath().'content.tpl');
