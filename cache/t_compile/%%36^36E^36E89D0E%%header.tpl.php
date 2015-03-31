@@ -259,4 +259,3 @@ unset($_smarty_tpl_vars);
 </h3>
 <?php endif; ?>
 <div id="content">
-

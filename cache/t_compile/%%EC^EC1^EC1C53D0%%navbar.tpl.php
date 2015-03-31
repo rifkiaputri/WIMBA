@@ -69,4 +69,4 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'comm
 		<?php echo $this->_plugins['function']['call_hook'][0][0]->smartyCallHook(array('name' => "Templates::Common::Header::Navbar::CurrentJournal"), $this);?>
 
                 	</ul>
-</div>
+</div>

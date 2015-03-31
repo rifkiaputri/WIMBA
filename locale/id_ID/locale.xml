@@ -47,6 +47,10 @@
 	<!-- Common Form Messages -->
 	
 	<!-- Common Email Messages -->
+	<message key="common.email.name">Nama</message>
+	<message key="common.email.address">E-mail</message>
+	<message key="common.email.content">Isi</message>
+	<message key="common.email.submit">Kirim</message>
 
 	<!-- Common Localization Terms -->
 
