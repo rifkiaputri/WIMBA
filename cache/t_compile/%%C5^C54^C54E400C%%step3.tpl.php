@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-21 11:41:53
+<?php /* Smarty version 2.6.26, created on 2015-04-01 10:24:17
          compiled from author/submit/step3.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'author/submit/step3.tpl', 19, false),array('function', 'url', 'author/submit/step3.tpl', 26, false),array('function', 'fieldLabel', 'author/submit/step3.tpl', 96, false),array('function', 'get_help_id', 'author/submit/step3.tpl', 103, false),array('function', 'form_language_chooser', 'author/submit/step3.tpl', 135, false),array('function', 'html_options', 'author/submit/step3.tpl', 196, false),array('function', 'call_hook', 'author/submit/step3.tpl', 211, false),array('modifier', 'assign', 'author/submit/step3.tpl', 26, false),array('modifier', 'escape', 'author/submit/step3.tpl', 31, false),array('modifier', 'to_array', 'author/submit/step3.tpl', 68, false),array('modifier', 'date_format', 'author/submit/step3.tpl', 80, false),)), $this); ?>
@@ -108,7 +108,7 @@ function moveAuthor(dir, authorIndex) {
 		<?php endif; ?>
 	</td>
 	<td width="70%" class="value">
-		<input type="file" class="uploadField" name="submissionFile" id="submissionFile" /> <input name="uploadSubmissionFile" type="submit" class="button" value="<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "common.upload"), $this);?>
+		<input type="file" class="uploadField" name="submissionFile" id="submissionFile" accept=".docx"/> <input name="uploadSubmissionFile" type="submit" class="button" value="<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "common.upload"), $this);?>
 " />
 		<?php if ($this->_tpl_vars['currentJournal']->getSetting('showEnsuringLink')): ?><a class="action" href="javascript:openHelp('<?php echo $this->_plugins['function']['get_help_id'][0][0]->smartyGetHelpId(array('key' => "editorial.sectionEditorsRole.review.blindPeerReview",'url' => 'true'), $this);?>
 ')"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "reviewer.article.ensuringBlindReview"), $this);?>

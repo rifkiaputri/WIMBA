@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-25 11:42:48
+<?php /* Smarty version 2.6.26, created on 2015-04-01 10:19:13
          compiled from file:C:%5Cxampp2%5Chtdocs%5Cojs-2.4.5/plugins/blocks/user/block.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/blocks/user/block.tpl', 13, false),array('function', 'url', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/blocks/user/block.tpl', 21, false),array('modifier', 'escape', 'file:C:\\xampp2\\htdocs\\ojs-2.4.5/plugins/blocks/user/block.tpl', 18, false),)), $this); ?>
@@ -56,8 +56,8 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'translate',
 					</tr>
 					<tr>
 						<td colspan="2"><p><input type="submit" value="<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "user.login"), $this);?>
-" class="button" /><input type="submit" value="<?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "user.register"), $this);?>
-" class="button" /></p></td>
+" class="button" /> or <a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'user','op' => 'register'), $this);?>
+">Register</a></p></td>
                                                 
 					</tr>
 				</table>

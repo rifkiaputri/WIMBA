@@ -16,14 +16,26 @@
   'copySubmissionAckAddress' => '',
   'copySubmissionAckPrimaryContact' => false,
   'copySubmissionAckSpecified' => false,
+  'disableUserReg' => false,
   'displayCurrentIssue' => true,
   'emailSignature' => '________________________________________________________________________
 WIMBA
 http://localhost/ojs-2.4.5/index.php/wimba',
+  'enableAnnouncements' => true,
+  'enableAnnouncementsHomepage' => true,
+  'enablePageNumber' => false,
+  'enablePublicArticleId' => false,
+  'enablePublicGalleyId' => false,
+  'enablePublicIssueId' => false,
+  'enablePublicSuppFileId' => false,
   'envelopeSender' => '',
   'fastTrackFee' => 0,
   'includeCopyrightStatement' => false,
   'includeLicense' => false,
+  'initialNumber' => 0,
+  'initialVolume' => 0,
+  'initialYear' => 0,
+  'issuePerVolume' => 0,
   'itemsPerPage' => 25,
   'journalTheme' => '',
   'licenseURL' => '',
@@ -36,16 +48,25 @@ http://localhost/ojs-2.4.5/index.php/wimba',
   'metaSubject' => false,
   'metaSubjectClass' => false,
   'metaType' => false,
+  'numAnnouncementsHomepage' => 1,
   'numPageLinks' => 10,
   'numWeeksPerReview' => 4,
   'onlineIssn' => '',
   'printIssn' => '',
+  'provideRefLinkInstructions' => false,
   'publicationFee' => 0,
+  'publicationFormatNumber' => false,
+  'publicationFormatTitle' => false,
+  'publicationFormatVolume' => false,
+  'publicationFormatYear' => false,
   'publisherInstitution' => '',
   'publisherUrl' => '',
+  'publishingMode' => 0,
   'purchaseArticleFee' => 0,
   'requireAuthorCompetingInterests' => false,
   'requireReviewerCompetingInterests' => false,
+  'restrictArticleAccess' => false,
+  'restrictSiteAccess' => false,
   'rtAbstract' => true,
   'rtAddComment' => true,
   'rtCaptureCite' => true,
@@ -55,6 +76,7 @@ http://localhost/ojs-2.4.5/index.php/wimba',
   'rtPrinterFriendly' => true,
   'rtSupplementaryFiles' => true,
   'rtViewMetadata' => true,
+  'showGalleyLinks' => false,
   'sponsors' => 
   array (
   ),
@@ -75,7 +97,11 @@ http://localhost/ojs-2.4.5/index.php/wimba',
   'supportEmail' => 'rachmawatyy@gmail.com',
   'supportName' => 'Rachmawaty',
   'supportPhone' => '',
+  'useCopyeditors' => false,
   'useEditorialBoard' => false,
+  'useLayoutEditors' => false,
+  'useProofreaders' => false,
+  'volumePerYear' => 0,
   'authorInformation' => 
   array (
     'en_US' => 'Interested in submitting to this journal? We recommend that you review the <a href="/ojs-2.4.5/index.php/test/about">About the Journal</a> page for the journal\'s section policies, as well as the <a href="/ojs-2.4.5/index.php/test/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="/ojs-2.4.5/index.php/test/user/register">register</a> with the journal prior to submitting or, if already registered, can simply <a href="/ojs-2.4.5/index.php/index/login">log in</a> and begin the five-step process.',
@@ -86,55 +112,7 @@ http://localhost/ojs-2.4.5/index.php/wimba',
   ),
   'copyeditInstructions' => 
   array (
-    'en_US' => 'The copyediting stage is intended to improve the flow, clarity, grammar, wording, and formatting of the article. It represents the last chance for the author to make any substantial changes to the text because the next stage is restricted to typos and formatting corrections. 
-
-The file to be copyedited is in Word or .rtf format and therefore can easily be edited as a word processing document. The set of instructions displayed here proposes two approaches to copyediting. One is based on Microsoft Word\'s Track Changes feature and requires that the copy editor, editor, and author have access to this program. A second system, which is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal.
-
-
-<h4>Copyediting Systems</h4>
-
-<strong>1. Microsoft Word\'s Track Changes</strong>
-
-Under Tools in the menu bar, the feature Track Changes enables the copy editor to make insertions (text appears in color) and deletions (text appears crossed out in color or in the margins as deleted). The copy editor can posit queries to both the author (Author Queries) and to the editor (Editor Queries) by inserting these queries in square brackets. The copyedited version is then uploaded, and the editor is notified. The editor then reviews the text and notifies the author.
-
-The editor and author should leave those changes with which they are satisfied. If further changes are necessary, the editor and author can make changes to the initial insertions or deletions, as well as make new insertions or deletions elsewhere in the text. Authors and editors should respond to each of the queries addressed to them, with responses placed inside the square brackets. 
-
-After the text has been reviewed by editor and author, the copy editor will make a final pass over the text accepting the changes in preparation for the layout and galley stage.
-
-
-<strong>2. Harvard Educational Review </strong>
-
-<strong>Instructions for Making Electronic Revisions to the Manuscript</strong>
-
-Please follow the following protocol for making electronic revisions to your manuscript:
-
-<strong>Responding to suggested changes.</strong>
-&nbsp; For each of the suggested changes that you accept, unbold the text.
-&nbsp; For each of the suggested changes that you do not accept, re-enter the original text and <strong>bold</strong> it.
-
-<strong>Making additions and deletions.</strong>
-&nbsp; Indicate additions by <strong>bolding</strong> the new text.
-&nbsp; Replace deleted sections with: <strong>[deleted text]</strong>.
-&nbsp; If you delete one or more sentence, please indicate with a note, e.g., <strong>[deleted 2 sentences]</strong>.
-
-<strong>Responding to Queries to the Author (QAs).</strong>
-&nbsp; Keep all QAs intact and bolded within the text. Do not delete them.
-&nbsp; To reply to a QA, add a comment after it. Comments should be delimited using:
-<strong>[Comment:]</strong>
-&nbsp; e.g., <strong>[Comment: Expanded discussion of methodology as you suggested]</strong>.
-
-<strong>Making comments.</strong>
-&nbsp; Use comments to explain organizational changes or major revisions
-&nbsp; e.g., <strong>[Comment: Moved the above paragraph from p. 5 to p. 7].</strong>
-&nbsp; Note: When referring to page numbers, please use the page numbers from the printed copy of the manuscript that was sent to you. This is important since page numbers may change as a document is revised electronically.
-
-<h4>An Illustration of an Electronic Revision</h4>
-
-<ol>
-<li><strong>Initial copyedit.</strong> The journal copy editor will edit the text to improve flow, clarity, grammar, wording, and formatting, as well as including author queries as necessary. Once the initial edit is complete, the copy editor will upload the revised document through the journal Web site and notify the author that the edited manuscript is available for review.</li>
-<li><strong>Author copyedit.</strong> Before making dramatic departures from the structure and organization of the edited manuscript, authors must check in with the editors who are co-chairing the piece. Authors should accept/reject any changes made during the initial copyediting, as appropriate, and respond to all author queries. When finished with the revisions, authors should rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc) and upload the revised document through the journal Web site as directed.</li>
-<li><strong>Final copyedit.</strong> The journal copy editor will verify changes made by the author and incorporate the responses to the author queries to create a final manuscript. When finished, the copy editor will upload the final document through the journal Web site and alert the layout editor to complete formatting.</li>
-</ol>',
+    'en_US' => 'The copyediting stage is intended to improve the flow, clarity, grammar, wording, and formatting of the article. It represents the last chance for the author to make any substantial changes to the text because the next stage is restricted to typos and formatting corrections. The file to be copyedited is in Word or .rtf format and therefore can easily be edited as a word processing document. The set of instructions displayed here proposes two approaches to copyediting. One is based on Microsoft Word\'s Track Changes feature and requires that the copy editor, editor, and author have access to this program. A second system, which is software independent, has been borrowed, with permission, from the Harvard Educational Review. The journal editor is in a position to modify these instructions, so suggestions can be made to improve the process for this journal.<h4>Copyediting Systems</h4><strong>1. Microsoft Word\'s Track Changes</strong> Under Tools in the menu bar, the feature Track Changes enables the copy editor to make insertions (text appears in color) and deletions (text appears crossed out in color or in the margins as deleted). The copy editor can posit queries to both the author (Author Queries) and to the editor (Editor Queries) by inserting these queries in square brackets. The copyedited version is then uploaded, and the editor is notified. The editor then reviews the text and notifies the author. The editor and author should leave those changes with which they are satisfied. If further changes are necessary, the editor and author can make changes to the initial insertions or deletions, as well as make new insertions or deletions elsewhere in the text. Authors and editors should respond to each of the queries addressed to them, with responses placed inside the square brackets. After the text has been reviewed by editor and author, the copy editor will make a final pass over the text accepting the changes in preparation for the layout and galley stage. <strong>2. Harvard Educational Review </strong> <strong>Instructions for Making Electronic Revisions to the Manuscript</strong> Please follow the following protocol for making electronic revisions to your manuscript: <strong>Responding to suggested changes.</strong>   For each of the suggested changes that you accept, unbold the text.   For each of the suggested changes that you do not accept, re-enter the original text and <strong>bold</strong> it. <strong>Making additions and deletions.</strong>   Indicate additions by <strong>bolding</strong> the new text.   Replace deleted sections with: <strong>[deleted text]</strong>.   If you delete one or more sentence, please indicate with a note, e.g., <strong>[deleted 2 sentences]</strong>. <strong>Responding to Queries to the Author (QAs).</strong>   Keep all QAs intact and bolded within the text. Do not delete them.   To reply to a QA, add a comment after it. Comments should be delimited using: <strong>[Comment:]</strong>   e.g., <strong>[Comment: Expanded discussion of methodology as you suggested]</strong>. <strong>Making comments.</strong>   Use comments to explain organizational changes or major revisions   e.g., <strong>[Comment: Moved the above paragraph from p. 5 to p. 7].</strong>  Note: When referring to page numbers, please use the page numbers from the printed copy of the manuscript that was sent to you. This is important since page numbers may change as a document is revised electronically.<h4>An Illustration of an Electronic Revision</h4><ol><li><strong>Initial copyedit.</strong> The journal copy editor will edit the text to improve flow, clarity, grammar, wording, and formatting, as well as including author queries as necessary. Once the initial edit is complete, the copy editor will upload the revised document through the journal Web site and notify the author that the edited manuscript is available for review.</li><li><strong>Author copyedit.</strong> Before making dramatic departures from the structure and organization of the edited manuscript, authors must check in with the editors who are co-chairing the piece. Authors should accept/reject any changes made during the initial copyediting, as appropriate, and respond to all author queries. When finished with the revisions, authors should rename the file from AuthorNameQA.doc to AuthorNameQAR.doc (e.g., from LeeQA.doc to LeeQAR.doc) and upload the revised document through the journal Web site as directed.</li><li><strong>Final copyedit.</strong> The journal copy editor will verify changes made by the author and incorporate the responses to the author queries to create a final manuscript. When finished, the copy editor will upload the final document through the journal Web site and alert the layout editor to complete formatting.</li></ol>',
   ),
   'donationFeeDescription' => 
   array (
@@ -229,30 +207,14 @@ Please follow the following protocol for making electronic revisions to your man
   ),
   'proofInstructions' => 
   array (
-    'en_US' => '<p>The proofreading stage is intended to catch any errors in the galley\'s spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF, and other available file formats used in publishing this item.</p>
-	<h4>For Spelling and Grammar Errors</h4>
-
-	<p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows:</p>
-
-	<pre>1. CHANGE...
+    'en_US' => '<p>The proofreading stage is intended to catch any errors in the galley\'s spelling, grammar, and formatting. More substantial changes cannot be made at this stage, unless discussed with the Section Editor. In Layout, click on VIEW PROOF to see the HTML, PDF, and other available file formats used in publishing this item.</p><h4>For Spelling and Grammar Errors</h4><p>Copy the problem word or groups of words and paste them into the Proofreading Corrections box with "CHANGE-TO" instructions to the editor as follows:</p><pre>1. CHANGE...
 	then the others
 	TO...
-	than the others</pre>
-	<br />
-	<pre>2. CHANGE...
+	than the others</pre><br /><pre>2. CHANGE...
 	Malinowsky
 	TO...
-	Malinowski</pre>
-	<br />
-
-	<h4>For Formatting Errors</h4>
-
-	<p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows:</p>
-	<br />
-	<pre>3. FORMATTING
-	The numbers in Table 3 are not aligned in the third column.</pre>
-	<br />
-	<pre>4. FORMATTING
+	Malinowski</pre><br /><h4>For Formatting Errors</h4><p>Describe the location and nature of the problem in the Proofreading Corrections box after typing in the title "FORMATTING" as follows:</p><br /><pre>3. FORMATTING
+	The numbers in Table 3 are not aligned in the third column.</pre><br /><pre>4. FORMATTING
 	The paragraph that begins "This last topic..." is not indented.</pre>',
   ),
   'publicationFeeDescription' => 
@@ -277,28 +239,7 @@ Please follow the following protocol for making electronic revisions to your man
   ),
   'refLinkInstructions' => 
   array (
-    'en_US' => '<h4>To Add Reference Linking to the Layout Process</h4>
-	<p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p>
-	<h4>A. When the Author Provides a Link with the Reference</h4>
-	<ol>
-	<li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it and using Word\'s Insert Hyperlink tool and the URL prepared above.</li>
-	</ol>
-	<h4>B. Enabling Readers to Search Google Scholar For References</h4>
-	<ol>
-		<li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title—e.g., "Peace"—then copy author and title).</li>
-		<li>Paste the reference\'s title between the %22\'s, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22</li>
-
-	<li>Add the phrase GS SEARCH to the end of each citation in the submission\'s References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting it and using Word\'s Insert Hyperlink tool and the URL prepared in #2.</li>
-	</ol>
-	<h4>C. Enabling Readers to Search for References with a DOI</h4>
-	<ol>
-	<li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li>
-	<li>Paste each DOI that the Query provides in the following URL (between = and &): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&link_type=DOI.</li>
-	<li>Add the phrase CrossRef to the end of each citation in the submission\'s References list.</li>
-	<li>Turn that phrase into a hyperlink by highlighting the phrase and using Word\'s Insert Hyperlink tool and the appropriate URL prepared in #2.</li>
-	</ol>',
+    'en_US' => '<h4>To Add Reference Linking to the Layout Process</h4><p>When turning a submission into HTML or PDF, make sure that all hyperlinks in the submission are active.</p><h4>A. When the Author Provides a Link with the Reference</h4><ol><li>While the submission is still in its word processing format (e.g., Word), add the phrase VIEW ITEM to the end of the reference that has a URL.</li><li>Turn that phrase into a hyperlink by highlighting it and using Word\'s Insert Hyperlink tool and the URL prepared above.</li></ol><h4>B. Enabling Readers to Search Google Scholar For References</h4><ol><li>While the submission is still in its word processing format (e.g., Word), copy the title of the work referenced in the References list (if it appears to be too common a title—e.g., "Peace"—then copy author and title).</li><li>Paste the reference\'s title between the %22\'s, placing a + between each word: http://scholar.google.com/scholar?q=%22PASTE+TITLE+HERE%22</li><li>Add the phrase GS SEARCH to the end of each citation in the submission\'s References list.</li><li>Turn that phrase into a hyperlink by highlighting it and using Word\'s Insert Hyperlink tool and the URL prepared in #2.</li></ol><h4>C. Enabling Readers to Search for References with a DOI</h4><ol><li>While the submission is still in Word, copy a batch of references into CrossRef Text Query http://www.crossref.org/freeTextQuery/.</li><li>Paste each DOI that the Query provides in the following URL (between = and &amp;): http://www.cmaj.ca/cgi/external_ref?access_num=PASTE DOI#HERE&amp;link_type=DOI.</li><li>Add the phrase CrossRef to the end of each citation in the submission\'s References list.</li><li>Turn that phrase into a hyperlink by highlighting the phrase and using Word\'s Insert Hyperlink tool and the appropriate URL prepared in #2.</li></ol>',
   ),
   'submissionChecklist' => 
   array (

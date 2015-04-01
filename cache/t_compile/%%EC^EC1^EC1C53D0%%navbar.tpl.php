@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-26 10:01:40
+<?php /* Smarty version 2.6.26, created on 2015-04-01 12:03:31
          compiled from common/navbar.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'common/navbar.tpl', 20, false),array('function', 'translate', 'common/navbar.tpl', 20, false),array('function', 'call_hook', 'common/navbar.tpl', 72, false),array('block', 'iterate', 'common/navbar.tpl', 26, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'common/navbar.tpl', 20, false),array('function', 'translate', 'common/navbar.tpl', 20, false),array('function', 'call_hook', 'common/navbar.tpl', 76, false),array('block', 'iterate', 'common/navbar.tpl', 26, false),)), $this); ?>
  <?php 
     $templateMgr = TemplateManager::getManager();
     $journal =& Request::getJournal();
@@ -60,13 +60,9 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'comm
 			<li id="categories"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('journal' => 'index','page' => 'search','op' => 'categories'), $this);?>
 "><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "navigation.categories"), $this);?>
 </a></li>
-		<?php endif; ?>                
-		<?php if ($this->_tpl_vars['enableAnnouncements']): ?>
-			<li id="announcements"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('page' => 'announcement'), $this);?>
-"><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "announcement.announcements"), $this);?>
-</a></li>
-		<?php endif; ?>
+		<?php endif; ?>                                
+                
 		<?php echo $this->_plugins['function']['call_hook'][0][0]->smartyCallHook(array('name' => "Templates::Common::Header::Navbar::CurrentJournal"), $this);?>
 
                 	</ul>
-</div>
+</div>

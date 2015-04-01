@@ -26,6 +26,10 @@
 					<span><img src="{$baseUrl}/icon/glyphicons-319-more-items.png">Edit About</span>
 				</a>
 			</li>
+                        
+                        {if $enableAnnouncements}
+                            <li id="announcements"><a href="{url op="announcements"}"><span><img src="{$baseUrl}/icon/glyphicons-319-more-items.png">Edit Announcement</span></a></li>
+                        {/if}{* enableAnnouncements *}
 			<li>
 				<a href="{url op="files"}">
 					<span><img src="{$baseUrl}/icon/glyphicons-28-search.png">Files Browser</span>
@@ -51,6 +55,7 @@
 					<span><img src="{$baseUrl}/icon/glyphicons-281-settings.png">Setup</span>
 				</a>
 			</li>
+                       
 			{*<li>
 				<a href="{url op="statistics"}">
 					<span><img src="{$baseUrl}/icon/glyphicons-41-stats.png">Stats & Reports</span>

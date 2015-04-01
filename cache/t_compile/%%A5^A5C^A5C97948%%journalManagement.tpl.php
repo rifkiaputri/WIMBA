@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-26 15:57:14
+<?php /* Smarty version 2.6.26, created on 2015-04-01 12:03:46
          compiled from common/journalManagement.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'common/journalManagement.tpl', 7, false),array('modifier', 'explode', 'common/journalManagement.tpl', 7, false),)), $this); ?>
@@ -38,7 +38,12 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'comm
 /icon/glyphicons-319-more-items.png">Edit About</span>
 				</a>
 			</li>
-			<li>
+                        
+                        <?php if ($this->_tpl_vars['enableAnnouncements']): ?>
+                            <li id="announcements"><a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'announcements'), $this);?>
+"><span><img src="<?php echo $this->_tpl_vars['baseUrl']; ?>
+/icon/glyphicons-319-more-items.png">Edit Announcement</span></a></li>
+                        <?php endif; ?>			<li>
 				<a href="<?php echo $this->_plugins['function']['url'][0][0]->smartyUrl(array('op' => 'files'), $this);?>
 ">
 					<span><img src="<?php echo $this->_tpl_vars['baseUrl']; ?>
@@ -59,6 +64,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'comm
 /icon/glyphicons-281-settings.png">Setup</span>
 				</a>
 			</li>
+                       
 			
 			
 			<li class="title">Roles</li>

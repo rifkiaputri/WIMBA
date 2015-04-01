@@ -64,10 +64,14 @@
 			<li id="archives"><a href="{url page="issue" op="archive"}">{translate key="navigation.archives"}</a></li>
 		{/if}
                 *}
+                
+                {*
 
 		{if $enableAnnouncements}
 			<li id="announcements"><a href="{url page="announcement"}">{translate key="announcement.announcements"}</a></li>
-		{/if}{* enableAnnouncements *}
+		{/if}{* enableAnnouncements 
+                
+                *}
 
 		{call_hook name="Templates::Common::Header::Navbar::CurrentJournal"}
                 {*
