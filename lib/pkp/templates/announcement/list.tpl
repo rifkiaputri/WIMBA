@@ -9,9 +9,10 @@
  *
  *}
 <table class="announcements">
-	<tr>
+	{*<tr>
 		<td colspan="2" class="headseparator">&nbsp;</td>
 	</tr>
+        *}
 
 {counter start=1 skip=1 assign="count"}
 {iterate from=announcements item=announcement}
@@ -29,7 +30,7 @@
 			<td class="more">&nbsp;</td>
 		</tr>
 		<tr class="details">
-			<td class="posted">{translate key="announcement.posted"}: {$announcement->getDatePosted()}</td>
+			{*<td class="posted">{translate key="announcement.posted"}: {$announcement->getDatePosted()}</td>*}
 			{if $announcement->getLocalizedDescription() != null}
 				<td class="more"><a href="{url page="announcement" op="view" path=$announcement->getId()}">{translate key="announcement.viewLink"}</a></td>
 			{/if}

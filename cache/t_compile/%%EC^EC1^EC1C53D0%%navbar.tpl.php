@@ -1,13 +1,14 @@
-<?php /* Smarty version 2.6.26, created on 2015-04-01 12:03:31
+<?php /* Smarty version 2.6.26, created on 2015-04-28 18:06:22
          compiled from common/navbar.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'common/navbar.tpl', 20, false),array('function', 'translate', 'common/navbar.tpl', 20, false),array('function', 'call_hook', 'common/navbar.tpl', 76, false),array('block', 'iterate', 'common/navbar.tpl', 26, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'common/navbar.tpl', 21, false),array('function', 'translate', 'common/navbar.tpl', 21, false),array('function', 'call_hook', 'common/navbar.tpl', 83, false),array('block', 'iterate', 'common/navbar.tpl', 27, false),)), $this); ?>
  <?php 
     $templateMgr = TemplateManager::getManager();
     $journal =& Request::getJournal();
     $issueDao =& DAORegistry::getDAO('IssueDAO');
     $publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
     $templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
+
  ?>
 <div id="navbar">
 	<ul class="menu">
@@ -22,7 +23,11 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'comm
                 <li id="article"><a>Article &#9662;</a>
                         <ul>
                             <?php $this->_tag_stack[] = array('iterate', array('from' => 'issues','item' => 'issue')); $_block_repeat=true;$this->_plugins['block']['iterate'][0][0]->smartyIterate($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>
-                                <li><a><?php echo $this->_tpl_vars['issue']->getYear(); ?>
+                                <?php if ($this->_tpl_vars['issue']->getYear() != $this->_tpl_vars['lastYear']): ?>
+                                    <?php if (! $this->_tpl_vars['notFirstYear']): ?>
+                                            <?php $this->assign('notFirstYear', 1); ?>
+                                    <?php endif; ?>
+                                    <li><a><?php echo $this->_tpl_vars['issue']->getYear(); ?>
  &#9656;</a>
                                         <ul>
                                             <?php $this->assign('year', $this->_tpl_vars['issue']->getYear()); ?>
@@ -34,7 +39,9 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'comm
                                                 }
                                              ?>
                                         </ul>
-                                </li>
+                                    </li>
+                                    <?php $this->assign('lastYear', $this->_tpl_vars['issue']->getYear()); ?>
+                                <?php endif; ?>
                              <?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo $this->_plugins['block']['iterate'][0][0]->smartyIterate($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>
                         </ul>
                 </li>

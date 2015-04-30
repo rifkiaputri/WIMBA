@@ -30,19 +30,19 @@
 {if $enableAnnouncementsHomepage}
 	{* Display announcements *}
 	<div id="announcementsHome">
-		<h3>{translate key="announcement.announcementsHome"}</h3>
+		{*<h3>{translate key="announcement.announcementsHome"}</h3>*}
 		{include file="announcement/list.tpl"}	
-		<table class="announcementsMore">
+		{*<table class="announcementsMore">
 			<tr>
 				<td><a href="{url page="announcement"}">{translate key="announcement.moreAnnouncements"}</a></td>
 			</tr>
 		</table>
+                *}
 	</div>
 {/if}
 
 {if $issue && $currentJournal->getSetting('publishingMode') != $smarty.const.PUBLISHING_MODE_NONE}
 	{* Display the table of contents or cover page of the current issue. *}
-	<h3>{$issue->getIssueIdentification()|strip_unsafe_html|nl2br}</h3>
 	{include file="issue/view.tpl"}
 {/if}
 

@@ -21,8 +21,8 @@
   'emailSignature' => '________________________________________________________________________
 WIMBA
 http://localhost/ojs-2.4.5/index.php/wimba',
-  'enableAnnouncements' => true,
-  'enableAnnouncementsHomepage' => true,
+  'enableAnnouncements' => false,
+  'enableAnnouncementsHomepage' => false,
   'enablePageNumber' => false,
   'enablePublicArticleId' => false,
   'enablePublicGalleyId' => false,
@@ -48,7 +48,7 @@ http://localhost/ojs-2.4.5/index.php/wimba',
   'metaSubject' => false,
   'metaSubjectClass' => false,
   'metaType' => false,
-  'numAnnouncementsHomepage' => 1,
+  'numAnnouncementsHomepage' => 0,
   'numPageLinks' => 10,
   'numWeeksPerReview' => 4,
   'onlineIssn' => '',
@@ -102,6 +102,10 @@ http://localhost/ojs-2.4.5/index.php/wimba',
   'useLayoutEditors' => false,
   'useProofreaders' => false,
   'volumePerYear' => 0,
+  'additionalHomeContent' => 
+  array (
+    'en_US' => '<p>Wimba, Journal of Visual Communication is a peer-reviewed journal in the field of visual communication. Published and organized by Visual Communication and Multimedia Research Group of ITB (Bandung Institute of Technology) since 2009, the journal is published twice a year. Wimba journa is open for article submission. Please check the template and submission guide section detailed information.</p><p><span style="color: #990000;"><em>Jurnal Komunikasi Visual Wimba adalah jurnal peer-review di bidang komunikasi visual. Jurnal ini dikelola dan diterbitkan oleh Kelompok Keahlian Komunikasi Visual dan Multimedia, FSRD ITB sejak 2009 dan terbit dua kali setahun. Jurnal Wimba menerima kiriman artikel ilmiah dalam bidang Komunikasi Visual, dengan petunjuk pengiriman dapat dilihat pada bagian tempalte dan Submission Guide.</em></span></p>',
+  ),
   'authorInformation' => 
   array (
     'en_US' => 'Interested in submitting to this journal? We recommend that you review the <a href="/ojs-2.4.5/index.php/test/about">About the Journal</a> page for the journal\'s section policies, as well as the <a href="/ojs-2.4.5/index.php/test/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="/ojs-2.4.5/index.php/test/user/register">register</a> with the journal prior to submitting or, if already registered, can simply <a href="/ojs-2.4.5/index.php/index/login">log in</a> and begin the five-step process.',
@@ -134,12 +138,12 @@ http://localhost/ojs-2.4.5/index.php/wimba',
   array (
     'en_US' => 
     array (
-      'name' => 'logo wimba.jpg',
-      'uploadName' => 'homeHeaderTitleImage_en_US.jpg',
+      'name' => 'logo_wimba.png',
+      'uploadName' => 'homeHeaderTitleImage_en_US.png',
       'width' => 300,
       'height' => 80,
-      'mimeType' => 'image/jpeg',
-      'dateUploaded' => '2015-03-24 06:02:12',
+      'mimeType' => 'image/png',
+      'dateUploaded' => '2015-04-29 06:45:40',
     ),
   ),
   'homeHeaderTitleType' => 
@@ -189,12 +193,12 @@ http://localhost/ojs-2.4.5/index.php/wimba',
   array (
     'en_US' => 
     array (
-      'name' => 'logo wimba.jpg',
-      'uploadName' => 'pageHeaderTitleImage_en_US.jpg',
+      'name' => 'logo_wimba.png',
+      'uploadName' => 'pageHeaderTitleImage_en_US.png',
       'width' => 300,
       'height' => 80,
-      'mimeType' => 'image/jpeg',
-      'dateUploaded' => '2015-03-26 19:19:16',
+      'mimeType' => 'image/png',
+      'dateUploaded' => '2015-04-29 06:45:25',
     ),
   ),
   'pageHeaderTitleType' => 

@@ -18,7 +18,7 @@ and open the template in the editor.
 }
 
 #issueCoverImage{
-    width: 40%;
+    width: 30%;
     float: left;
 }
 
@@ -30,7 +30,7 @@ and open the template in the editor.
 }
 
 .issue-content{
-    width: 50%;
+    width: 65%;
     float: right;
 }
 

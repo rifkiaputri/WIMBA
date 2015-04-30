@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-27 08:17:52
+<?php /* Smarty version 2.6.26, created on 2015-04-30 05:52:24
          compiled from issue/view.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'issue/view.tpl', 13, false),array('function', 'url', 'issue/view.tpl', 25, false),array('modifier', 'to_array', 'issue/view.tpl', 25, false),array('modifier', 'assign', 'issue/view.tpl', 25, false),array('modifier', 'escape', 'issue/view.tpl', 34, false),array('modifier', 'strip_unsafe_html', 'issue/view.tpl', 41, false),array('modifier', 'nl2br', 'issue/view.tpl', 41, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'translate', 'issue/view.tpl', 13, false),array('function', 'url', 'issue/view.tpl', 25, false),array('modifier', 'to_array', 'issue/view.tpl', 25, false),array('modifier', 'assign', 'issue/view.tpl', 25, false),array('modifier', 'escape', 'issue/view.tpl', 34, false),array('modifier', 'strip_unsafe_html', 'issue/view.tpl', 37, false),array('modifier', 'nl2br', 'issue/view.tpl', 37, false),)), $this); ?>
 <?php if ($this->_tpl_vars['subscriptionRequired'] && $this->_tpl_vars['showGalleyLinks'] && $this->_tpl_vars['showToc']): ?>
 	<div id="accessKey">
 		<img src="<?php echo $this->_tpl_vars['baseUrl']; ?>
@@ -39,8 +39,9 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'translate',
 "<?php endif; ?><?php if ($this->_tpl_vars['height']): ?> height="<?php echo ((is_array($_tmp=$this->_tpl_vars['height'])) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
 "<?php endif; ?>/></a></div><?php endif; ?>
 	        <div class="issue-content">
-        <h3><?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "issue.toc"), $this);?>
-</h3>
+        <h4><?php echo ((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['issue']->getIssueIdentification())) ? $this->_run_mod_handler('strip_unsafe_html', true, $_tmp) : String::stripUnsafeHtml($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
+ <?php echo $this->_plugins['function']['translate'][0][0]->smartyTranslate(array('key' => "issue.toc"), $this);?>
+ / <font color="#900">Daftar Isi</font></h4>
 	<?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "issue/issue.tpl", 'smarty_include_vars' => array()));
 $this->_tpl_vars = $_smarty_tpl_vars;

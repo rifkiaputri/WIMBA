@@ -112,8 +112,7 @@ class SubmitHandler extends AuthorHandler {
 					break;
 
 				case 3:
-                                        if ($request->getUserVar('uploadSubmissionFile')) {
-                                            echo $_FILES['submissionFile']['tmp_name'];    
+                                        if ($request->getUserVar('uploadSubmissionFile')) {    
                                             $submitForm2->uploadSubmissionFile('submissionFile');
 						$editData = true;
 					}

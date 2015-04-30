@@ -9,7 +9,7 @@
  *
  *}
 {foreach name=sections from=$publishedArticles item=section key=sectionId}
-{if $section.title}<h4 class="tocSectionTitle">{$section.title|escape}</h4>{/if}
+{*{if $section.title}<h4 class="tocSectionTitle">{$section.title|escape}</h4>{/if}*}
 
 {foreach from=$section.articles item=article}
 	{assign var=articlePath value=$article->getBestArticleId($currentJournal)}

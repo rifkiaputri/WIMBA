@@ -1,14 +1,12 @@
-<?php /* Smarty version 2.6.26, created on 2015-03-26 04:39:02
+<?php /* Smarty version 2.6.26, created on 2015-04-30 05:53:16
          compiled from issue/issue.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'issue/issue.tpl', 12, false),array('modifier', 'strip_unsafe_html', 'issue/issue.tpl', 53, false),array('modifier', 'to_array', 'issue/issue.tpl', 73, false),array('function', 'url', 'issue/issue.tpl', 41, false),array('function', 'translate', 'issue/issue.tpl', 42, false),array('function', 'call_hook', 'issue/issue.tpl', 48, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'url', 'issue/issue.tpl', 41, false),array('function', 'translate', 'issue/issue.tpl', 42, false),array('function', 'call_hook', 'issue/issue.tpl', 48, false),array('modifier', 'escape', 'issue/issue.tpl', 42, false),array('modifier', 'strip_unsafe_html', 'issue/issue.tpl', 53, false),array('modifier', 'to_array', 'issue/issue.tpl', 73, false),)), $this); ?>
 <?php $_from = $this->_tpl_vars['publishedArticles']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }$this->_foreach['sections'] = array('total' => count($_from), 'iteration' => 0);
 if ($this->_foreach['sections']['total'] > 0):
     foreach ($_from as $this->_tpl_vars['sectionId'] => $this->_tpl_vars['section']):
         $this->_foreach['sections']['iteration']++;
 ?>
-<?php if ($this->_tpl_vars['section']['title']): ?><h4 class="tocSectionTitle"><?php echo ((is_array($_tmp=$this->_tpl_vars['section']['title'])) ? $this->_run_mod_handler('escape', true, $_tmp) : $this->_plugins['modifier']['escape'][0][0]->smartyEscape($_tmp)); ?>
-</h4><?php endif; ?>
 
 <?php $_from = $this->_tpl_vars['section']['articles']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['article']):

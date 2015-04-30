@@ -14,6 +14,7 @@
     $issueDao =& DAORegistry::getDAO('IssueDAO');
     $publishedIssuesIterator = $issueDao->getPublishedIssues($journal->getId(), $rangeInfo);
     $templateMgr->assign_by_ref('issues', $publishedIssuesIterator);
+
 {/php}
 <div id="navbar">
 	<ul class="menu">
@@ -24,7 +25,11 @@
                 <li id="article"><a>Article &#9662;</a>
                         <ul>
                             {iterate from=issues item=issue}
-                                <li><a>{$issue->getYear()} &#9656;</a>
+                                {if $issue->getYear() != $lastYear}
+                                    {if !$notFirstYear}
+                                            {assign var=notFirstYear value=1}
+                                    {/if}
+                                    <li><a>{$issue->getYear()} &#9656;</a>
                                         <ul>
                                             {assign var="year" value=$issue->getYear()}
                                             {php}
@@ -35,7 +40,9 @@
                                                 }
                                             {/php}
                                         </ul>
-                                </li>
+                                    </li>
+                                    {assign var=lastYear value=$issue->getYear()}
+                                {/if}
                              {/iterate}
                         </ul>
                 </li>
